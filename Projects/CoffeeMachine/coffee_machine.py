@@ -3,39 +3,51 @@ class CoffeeMachine:
     """
     # instance attributes
 
-    def __init__(self, water, milk, coffee, money):
-        self.water = water
-        self.milk = milk
-        self.coffee = coffee
-        self.money = money
+    def __init__(self, water: float, milk: float, coffee: float, money: float):
+        self.__water = water
+        self.__milk = milk
+        self.__coffee = coffee
+        self.__money = money
 
 # instance method
-    def report(self):
-        return f'Water: {self.water}ml \n' + \
-            f'Milk: {self.milk}ml \n' + \
-            f'Coffee: {self.coffee}g \n' + \
-            f'Money: ${self.money:.2f}'
+    def report(self) -> str:
+        return f'Water: {self.__water}ml \n' + \
+            f'Milk: {self.__milk}ml \n' + \
+            f'Coffee: {self.__coffee}g \n' + \
+            f'Money: ${self.__money:.2f}'
 
-    def add_water(self, water):
-        self.water += water
+    def water(self):
+        return self.__water
 
-    def add_milk(self, milk):
-        self.milk += milk
+    def milk(self):
+        return self.__milk
 
-    def add_coffee(self, coffee):
-        self.coffee += coffee
+    def coffee(self):
+        return self.__coffee
 
-    def add_money(self, money):
-        self.money += money
+    def money(self):
+        return self.__money
 
-    def sub_water(self, water):
-        self.water -= water
+    def add_water(self, water: float):
+        self.__water += water
 
-    def sub_milk(self, milk):
-        self.milk -= milk
+    def add_milk(self, milk: float):
+        self.__milk += milk
 
-    def sub_coffee(self, coffee):
-        self.coffee -= coffee
+    def add_coffee(self, coffee: float):
+        self.__coffee += coffee
 
-    def sub_money(self, money):
-        self.money -= money
+    def add_money(self, money: float):
+        self.__money += money
+
+    def sub_water(self, water: float):
+        self.__water -= water
+
+    def sub_milk(self, milk: float):
+        self.__milk -= milk
+
+    def sub_coffee(self, coffee: float):
+        self.__coffee -= coffee
+
+    def sub_money(self, money: float):
+        self.__money -= money
