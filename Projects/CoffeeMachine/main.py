@@ -75,10 +75,10 @@ resources = {
     "coffee": 100,
 }
 
-q = coin.Coin(0.25)
-d = coin.Coin(0.10)
-n = coin.Coin(0.05)
-p = coin.Coin(0.01)
+q = coin.Coin(0.25) # Quarter
+d = coin.Coin(0.10) # Dime
+n = coin.Coin(0.05) # Nickel
+p = coin.Coin(0.01) # Penny
 
 cm = coffee_machine.CoffeeMachine(
     resources["water"], resources["milk"], resources["coffee"], money=0)
