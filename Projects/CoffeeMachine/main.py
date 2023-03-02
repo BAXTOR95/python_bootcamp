@@ -39,8 +39,8 @@
         - off: turns off the machine
         - refill: refills resources inside the machine
 """
-import coffee_machine
-import coin
+from coffee_machine import CoffeeMachine
+from coin import Coin
 
 MENU = {
     "espresso": {
@@ -75,12 +75,12 @@ resources = {
     "coffee": 100,
 }
 
-q = coin.Coin(0.25) # Quarter
-d = coin.Coin(0.10) # Dime
-n = coin.Coin(0.05) # Nickel
-p = coin.Coin(0.01) # Penny
+q = Coin(0.25) # Quarter
+d = Coin(0.10) # Dime
+n = Coin(0.05) # Nickel
+p = Coin(0.01) # Penny
 
-cm = coffee_machine.CoffeeMachine(
+cm = CoffeeMachine(
     resources["water"], resources["milk"], resources["coffee"], money=0)
 
 
@@ -108,10 +108,10 @@ def get_coins() -> float:
         float: total value inserted
     """
     print("Please insert coins.")
-    q.setCount(int(input("How many quarters?: ")))
-    d.setCount(int(input("How many dimes?: ")))
-    n.setCount(int(input("How many nickles?: ")))
-    p.setCount(int(input("How many pennies?: ")))
+    q.set_count(int(input("How many quarters?: ")))
+    d.set_count(int(input("How many dimes?: ")))
+    n.set_count(int(input("How many nickles?: ")))
+    p.set_count(int(input("How many pennies?: ")))
 
     return q.total_value() + d.total_value() + n.total_value() + p.total_value()
 

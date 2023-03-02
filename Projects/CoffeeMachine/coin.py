@@ -13,10 +13,7 @@ class Coin:
     def count(self):
         return self.__count
 
-    def setValue(self, value: float):
-        self.__value = value
-
-    def setCount(self, quantity: int):
+    def set_count(self, quantity: int):
         self.__count = quantity
 
     def total_value(self):
