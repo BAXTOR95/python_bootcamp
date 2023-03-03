@@ -46,7 +46,6 @@ def get_data():
     """
 
     # Select # of Questions
-
     i_number_questions = int(input("Select number of questions: ") or 10)
     amount = f"amount={i_number_questions}" if i_number_questions > 0 else f"amount=10"
 
