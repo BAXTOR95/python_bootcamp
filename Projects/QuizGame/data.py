@@ -20,14 +20,56 @@ default_data = [
 ]
 
 
+def get_category():
+    """Get categories from Open Trivia DB API
+
+    Returns:
+        dict: categories data
+    """
+    # using https://opentdb.com/api_category.php api to get available categories
+    url = "https://opentdb.com/api_category.php"
+
+    # store the response of URL
+    response = urlopen(url)
+
+    # storing the JSON response from url in data
+    data_json = json.loads(response.read())
+
+    return data_json["trivia_categories"]
+
+
 def get_data():
     """Get data from Open Trivia DB API
 
     Returns:
         dict: questionnaire data
     """
+
+    # Select # of Questions
+
+    i_number_questions = int(input("Select number of questions: ") or 10)
+    amount = f"amount={i_number_questions}" if i_number_questions > 0 else f"amount=10"
+
+    # Select Category
+    print("Select category from the following list:")
+    category_data = get_category()
+    print(f"0: Any Category.", end="\n")
+    for item in category_data:
+        i_number = item["id"] - 8
+        i_name = item["name"]
+        print(f"{i_number}: {i_name}.", end="\n")
+    i_category = int(input("Option: ") or 0)
+    category = f"category={i_category + 8}" if i_category in range(
+        1, len(category_data)) else ""
+
+    # Select Difficulty
+    i_difficulty = input(
+        "Select difficulty: (easy, medium, hard): ").lower() or ""
+    difficulty = f"difficulty={i_difficulty}" if i_difficulty in (
+        "easy", "medium", "hard") else ""
+
     # using https://opentdb.com/api_config.php api to get new dataset of questions
-    url = "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=boolean"
+    url = f"https://opentdb.com/api.php?{amount}&{category}&{difficulty}&type=boolean"
 
     # store the response of URL
     response = urlopen(url)
@@ -44,7 +86,12 @@ def get_data():
                 "text": question["question"],
                 "answer": question["correct_answer"]
             })
+    elif data_json["response_code"] == 1:
+        print("Could not return results. There are not enough questions for your query.")
+        print("Using default data...")
+        question_data = default_data
     else:
+        print("Invalid call. Using default data...")
         question_data = default_data
 
     return question_data
