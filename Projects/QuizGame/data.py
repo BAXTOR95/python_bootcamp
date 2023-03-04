@@ -70,27 +70,32 @@ def get_data():
     # using https://opentdb.com/api_config.php api to get new dataset of questions
     url = f"https://opentdb.com/api.php?{amount}&{category}&{difficulty}&type=boolean"
 
-    # store the response of URL
-    response = urlopen(url)
+    try:
+        # store the response of URL
+        response = urlopen(url)
 
-    # storing the JSON response from url in data
-    data_json = json.loads(response.read())
+        # storing the JSON response from url in data
+        data_json = json.loads(response.read())
 
-    question_data = []
+        question_data = []
 
-    if data_json["response_code"] == 0:
-        questionnaire = data_json["results"]
-        for question in questionnaire:
-            question_data.append({
-                "text": question["question"],
-                "answer": question["correct_answer"]
-            })
-    elif data_json["response_code"] == 1:
-        print("Could not return results. There are not enough questions for your query.")
-        print("Using default data...")
-        question_data = default_data
-    else:
+        if data_json["response_code"] == 0:
+            questionnaire = data_json["results"]
+            for question in questionnaire:
+                question_data.append({
+                    "text": question["question"],
+                    "answer": question["correct_answer"]
+                })
+        elif data_json["response_code"] == 1:
+            print("Could not return results. There are not enough questions for your query.")
+            print("Using default data...")
+            question_data = default_data
+        else:
+            print("Invalid call. Using default data...")
+            question_data = default_data
+
+        return question_data
+    except Exception as e:
         print("Invalid call. Using default data...")
         question_data = default_data
-
-    return question_data
+        raise e
