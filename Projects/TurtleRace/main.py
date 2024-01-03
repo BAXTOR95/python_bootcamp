@@ -37,9 +37,11 @@ while is_race_on:
             winning_color = racer.pencolor()
             if winning_color == user_bet:  # Check if winning color matches the bet
                 print(f"You've won! The {winning_color} turtle is the winner!")
+                break;
             else:
                 print(
                     f"You've lost! The {winning_color} turtle is the winner!")
+                break;
 
         rand_distance = random.randint(0, 10)
         racer.forward(rand_distance)  # Move the racer forward randomly
