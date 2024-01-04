@@ -2,8 +2,8 @@ from turtle import Turtle
 
 
 class Snake:
-    """Snake class
-    """
+    """Snake class"""
+
     STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
     MOVE_DISTANCE = 20
     UP = 90
@@ -18,8 +18,7 @@ class Snake:
         self.last_direction = self.head.heading()
 
     def create_snake(self):
-        """Creates a Snake with 3 segments
-        """
+        """Creates a Snake with 3 segments"""
         for position in self.STARTING_POSITIONS:
             self.add_segment(position)
 
@@ -35,14 +34,20 @@ class Snake:
         part.goto(position)
         self.segments.append(part)
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+        self.last_direction = self.head.heading()
+
     def grow(self):
-        """Grows the snake by 1 segment
-        """
+        """Grows the snake by 1 segment"""
         self.add_segment(self.segments[-1].position())
 
     def move(self):
-        """Move the snake forward by 20 passes
-        """
+        """Move the snake forward by 20 passes"""
         for part_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[part_num - 1].xcor()
             new_y = self.segments[part_num - 1].ycor()
@@ -51,25 +56,21 @@ class Snake:
         self.last_direction = self.head.heading()
 
     def up(self):
-        """Change the heading of the snake to the north (90)
-        """
+        """Change the heading of the snake to the north (90)"""
         if self.head.heading() != self.DOWN and self.last_direction != self.DOWN:
             self.head.setheading(self.UP)
 
     def down(self):
-        """Change the heading of the snake to the south (270)
-        """
+        """Change the heading of the snake to the south (270)"""
         if self.head.heading() != self.UP and self.last_direction != self.UP:
             self.head.setheading(self.DOWN)
 
     def right(self):
-        """Change the heading of the snake to the east (0)
-        """
+        """Change the heading of the snake to the east (0)"""
         if self.head.heading() != self.LEFT and self.last_direction != self.LEFT:
             self.head.setheading(self.RIGHT)
 
     def left(self):
-        """Change the heading of the snake to the west (180)
-        """
+        """Change the heading of the snake to the west (180)"""
         if self.head.heading() != self.RIGHT and self.last_direction != self.RIGHT:
             self.head.setheading(self.LEFT)
