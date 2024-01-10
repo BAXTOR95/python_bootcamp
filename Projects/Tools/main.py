@@ -13,13 +13,13 @@ def ask_quit():
     window.withdraw()  # Hide the main window
 
     # Ask user with a messagebox
-    response = messagebox.askyesno("Quit Game", "Do you want to quit?")
+    response = messagebox.askyesno("Quit", "Do you want to quit?")
 
     if response:
-        print("Quitting game...")
+        print("Quitting...")
         return response
     else:
-        print("Continuing game...")
+        print("Continuing...")
         return response
 
     window.destroy()
