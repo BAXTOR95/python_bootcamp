@@ -1,5 +1,6 @@
 from tkinter import *
 from PIL import Image
+import pygame
 
 # ------------------------------ CONSTANTS ------------------------------- #
 DARK_BLUE = "#222831"
@@ -34,6 +35,13 @@ def focusWindow():
     window.attributes('-topmost', False)  # Revert to normal
 
 
+def play_sound():
+    pygame.mixer.init()
+    pygame.mixer.music.load('beep.wav')
+    pygame.mixer.music.set_volume(0.5)
+    pygame.mixer.music.play()
+
+
 def start_timer():
     global reps
     reps += 1
@@ -42,10 +50,12 @@ def start_timer():
     long_break_sec = LONG_BREAK_MIN * 60
 
     if reps % 8 == 0:
+        play_sound()
         focusWindow()
         count_down(long_break_sec)
         timer_label.config(text="Break", fg=DARK_GREY)
     elif reps % 2 == 0:
+        play_sound()
         focusWindow()
         count_down(short_break_sec)
         timer_label.config(text="Break", fg=DARK_BLUE)
@@ -82,6 +92,8 @@ def count_down(count):
 window = Tk()
 window.title("Pomodoro")
 window.config(padx=50, pady=25, bg=GREY)
+# Set the window icon
+window.iconbitmap('tomato.ico')
 
 # Open the image to find its size
 img = Image.open(IMAGE_PATH)
