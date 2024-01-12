@@ -35,9 +35,9 @@ def focusWindow():
     window.attributes('-topmost', False)  # Revert to normal
 
 
-def play_sound():
+def play_sound(sound_path):
     pygame.mixer.init()
-    pygame.mixer.music.load('beep.wav')
+    pygame.mixer.music.load(sound_path)
     pygame.mixer.music.set_volume(0.5)
     pygame.mixer.music.play()
 
@@ -50,16 +50,17 @@ def start_timer():
     long_break_sec = LONG_BREAK_MIN * 60
 
     if reps % 8 == 0:
-        play_sound()
+        play_sound('beep.wav')
         focusWindow()
         count_down(long_break_sec)
         timer_label.config(text="Break", fg=DARK_GREY)
     elif reps % 2 == 0:
-        play_sound()
+        play_sound('beep.wav')
         focusWindow()
         count_down(short_break_sec)
         timer_label.config(text="Break", fg=DARK_BLUE)
     else:
+        play_sound('start.wav')
         focusWindow()
         count_down(work_sec)
         timer_label.config(text="Work", fg=TEAL)
