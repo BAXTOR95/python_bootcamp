@@ -1,4 +1,5 @@
 import pandas
+import string
 
 # Load the CSV into a DataFrame
 nato_data = pandas.read_csv("nato_phonetic_alphabet.csv")
@@ -16,10 +17,22 @@ def word_to_phonetic(word):
     ]
 
 
-# Get user input
-user_word = input("Enter a word: ")
+def input_is_only_letters(user_input):
+    # Check if every character in the user_input is a letter
+    return all(char in string.ascii_letters for char in user_input)
 
-# Convert the word to its phonetic code
-phonetic_code = word_to_phonetic(user_word)
 
-print(phonetic_code)
+while True:
+    try:
+        # Get user input
+        user_word = input("Enter a word: ")
+        print(user_word)
+        if not input_is_only_letters(user_word):
+            raise ValueError("Sorry, only letters in the alphabet please.")
+        else:
+            # Convert the word to its phonetic code
+            phonetic_code = word_to_phonetic(user_word)
+            print(phonetic_code)
+            break
+    except ValueError as e:
+        print(e)
