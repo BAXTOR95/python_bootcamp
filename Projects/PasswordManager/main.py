@@ -4,6 +4,7 @@ import re
 import random
 import string
 import pyperclip
+import json
 
 
 # --------------------------- PASSWORD GENERATOR ---------------------------- #
@@ -19,6 +20,36 @@ def generate_password(length=12):
     password_entry.delete(0, END)
     password_entry.insert(END, string=password)
     pyperclip.copy(password)  # Copy password to clipboard
+
+
+# ----------------------------- SEARCH ACCOUNT ------------------------------ #
+def search():
+    website = website_entry.get()
+
+    try:
+        with open("data.json", mode="r") as file:
+            # Reading old data
+            data = json.load(file)
+    except FileNotFoundError:
+        messagebox.showerror(
+            "No data stored", f"Please store some data before attempting to search"
+        )
+    else:
+        if not validate_website(website):
+            messagebox.showerror(
+                "Website cannot be empty", f"Please type a website name first."
+            )
+        elif website in data:
+            messagebox.showinfo(
+                title=website,
+                message=f"Email: {data[website]['email']}"
+                f"\nPassword: {data[website]['password']}",
+            )
+        else:
+            messagebox.showerror(
+                f"'{website}' not found",
+                f"Website not found in the database.\nPlease add it first.",
+            )
 
 
 # ---------------------------- SAVE PASSWORD -------------------------------- #
@@ -49,6 +80,12 @@ def save_password():
     website = website_entry.get()
     email = email_username_entry.get()
     password = password_entry.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
 
     if not validate_email(email):
         messagebox.showerror("Invalid email", f"Email '{email}' is not valid.")
@@ -66,10 +103,26 @@ def save_password():
         )
 
         if is_ok:
-            with open("data.txt", mode="a+") as file:
-                file.write(f"{website} | {email} | {password}\n")
+            try:
+                with open("data.json", mode="r") as file:
+                    # Reading old data
+                    data = json.load(file)
+
+            except FileNotFoundError:
+                with open("data.json", mode="w") as file:
+                    # Saving data
+                    json.dump(new_data, file, indent=4)
+            else:
+                # Updating old data with new data
+                data.update(new_data)
+
+                with open("data.json", mode="w") as file:
+                    # Saving updated data
+                    json.dump(data, file, indent=4)
+            finally:
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
+            # end try
 
 
 # ------------------------------- UI SETUP ---------------------------------- #
@@ -92,7 +145,7 @@ canvas.grid(column=1, row=0)
 website_label = Label(text="Website:")
 website_label.grid(column=0, row=1)
 website_entry = Entry()
-website_entry.grid(column=1, row=1, columnspan=2, sticky="EW")
+website_entry.grid(column=1, row=1, sticky="EW")
 website_entry.focus()
 
 # Email/Username Field
@@ -109,6 +162,8 @@ password_entry = Entry()
 password_entry.grid(column=1, row=3, sticky="EW")
 
 # Buttons
+search_btn = Button(text="Search", command=search)
+search_btn.grid(column=2, row=1, sticky="EW")
 password_gen_btn = Button(text="Generate Password", command=generate_password)
 password_gen_btn.grid(column=2, row=3, sticky="EW")
 add_btn = Button(text="Add", width=35, command=save_password)
