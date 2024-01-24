@@ -40,12 +40,31 @@ text.pack()
 
 
 # Spinbox
+def only_numbers(P):
+    if P.isdigit():
+        num = int(P)
+        if 0 <= num <= 50:
+            return True
+    elif P == "":
+        # Allow empty field for backspace/delete
+        return True
+    return False
+
+
 def spinbox_used():
     # gets the current value in spinbox.
     print(spinbox.get())
 
 
-spinbox = Spinbox(from_=0, to=10, width=5, command=spinbox_used)
+validate_command = (window.register(only_numbers), '%P')
+spinbox = Spinbox(
+    from_=0,
+    to=10,
+    width=5,
+    validate="key",
+    validatecommand=validate_command,
+    command=spinbox_used,
+)
 spinbox.pack()
 
 
@@ -94,6 +113,7 @@ radiobutton2.pack()
 # Listbox
 def listbox_used(event):
     # Gets current selection from listbox
+    print(listbox.curselection())
     print(listbox.get(listbox.curselection()))
 
 
