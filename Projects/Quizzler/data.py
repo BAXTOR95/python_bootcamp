@@ -66,7 +66,7 @@ def get_data(p_questions, p_category, p_difficulty):
     amount = f"amount={p_questions}" if p_questions > 0 else f"amount=10"
 
     # Set Category
-    category = f"category={p_category}"
+    category = f"category={0 if p_category == 0 else p_category + 8}"
 
     # Set Difficulty
     difficulty = f"difficulty={p_difficulty}"
