@@ -1,117 +1,46 @@
-import requests
-import html
 from tkinter import messagebox
-
-default_data = [
-    {"text": "A slug's blood is green.", "answer": "True"},
-    {"text": "The loudest animal is the African Elephant.", "answer": "False"},
-    {
-        "text": "Approximately one quarter of human bones are in the feet.",
-        "answer": "True",
-    },
-    {
-        "text": "The total surface area of a human lungs is the size of a football pitch.",
-        "answer": "True",
-    },
-    {
-        "text": "In West Virginia, USA, if you accidentally hit an animal with your car, "
-        "you are free to take it home to eat.",
-        "answer": "True",
-    },
-    {
-        "text": "In London, UK, if you happen to die in the House of Parliament, "
-        "you are entitled to a state funeral.",
-        "answer": "False",
-    },
-    {"text": "It is illegal to pee in the Ocean in Portugal.", "answer": "True"},
-    {"text": "You can lead a cow down stairs but not up stairs.", "answer": "False"},
-    {"text": "Google was originally called 'Backrub'.", "answer": "True"},
-    {"text": "Buzz Aldrin's mother's maiden name was 'Moon'.", "answer": "True"},
-    {
-        "text": "No piece of square dry paper can be folded in half more than 7 times.",
-        "answer": "False",
-    },
-    {"text": "A few ounces of chocolate can kill a small dog.", "answer": "True"},
-]
+from api import fetch_trivia_questions
+from validation import validate_trivia_parameters
+import html
+import json
 
 
-def get_category():
-    """Get categories from Open Trivia DB API
-
-    Returns:
-        dict: categories data
-    """
-    # using https://opentdb.com/api_category.php api to get available categories
-    url = "https://opentdb.com/api_category.php"
-
-    # store the response of URL
-    response = requests.get(url)
-    response.raise_for_status()
-
-    # storing the JSON response from url in data
-    data_json = response.json()
-    default_data = [{"id": 0, "name": "Any Category"}]
-
-    return default_data + data_json["trivia_categories"]
-
-
-def get_data(p_questions, p_category, p_difficulty):
-    """Get data from Open Trivia DB API
-
-    Returns:
-        dict: questionnaire data
-    """
-
-    # Set # of Questions
-    amount = f"amount={p_questions}" if p_questions > 0 else f"amount=10"
-
-    # Set Category
-    category = f"category={0 if p_category == 0 else p_category + 8}"
-
-    # Set Difficulty
-    difficulty = f"difficulty={p_difficulty}"
-
-    # using https://opentdb.com/api_config.php api to get new dataset of questions
-    url = f"https://opentdb.com/api.php?{amount}&{category}&{difficulty}&type=boolean"
-
-    question_data = []
-
+def load_default_trivia_data(file_path: str) -> list:
     try:
-        # store the response of URL
-        response = requests.get(url)
-        response.raise_for_status()
+        with open(file_path, 'r') as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Error loading default trivia data: {e}")
+        return []
 
-        # storing the JSON response from url in data
-        data_json = response.json()
 
-        if data_json["response_code"] == 0:
-            questionnaire = data_json["results"]
-            for question in questionnaire:
-                question_data.append(
-                    {
-                        "text": html.unescape(question["question"]),
-                        "answer": question["correct_answer"],
-                    }
-                )
-        elif data_json["response_code"] == 1:
-            messagebox.showerror(
-                "Could not get results",
-                "There are not enough questions for your query.\nUsing default data...",
-            )
-            question_data = default_data
-        else:
-            messagebox.showerror(
-                "Could not get results",
-                "Invalid call.\nUsing default data...",
-            )
-            question_data = default_data
+def get_trivia_data(questions: int, category: int, difficulty: str) -> list:
+    # Load default trivia data from a file
+    default_data = load_default_trivia_data('default_trivia_questions.json')
 
-    except Exception as e:
+    if not validate_trivia_parameters(questions, category, difficulty):
+        return default_data
+
+    data_json = fetch_trivia_questions(questions, category, difficulty)
+    if not data_json:
         messagebox.showerror(
-            "Could not get results",
-            "Invalid call.\nUsing default data...",
+            "Error", "Failed to fetch data from API. Using default data."
         )
-        question_data = default_data
+        return default_data
 
-    finally:
-        return question_data
+    if data_json["response_code"] == 1:
+        messagebox.showerror(
+            "Not enough data", "Not enough data for your request. Using default data."
+        )
+        return default_data
+    elif data_json["response_code"] not in (0, 1):
+        messagebox.showerror("Error", "API Error. Using default data.")
+        return default_data
+
+    return [
+        {
+            "text": html.unescape(question["question"]),
+            "answer": question["correct_answer"],
+        }
+        for question in data_json["results"]
+    ]
