@@ -13,13 +13,14 @@ def fetch_news_data(query, from_, to, api_key, domains, sort_by="relevancy", lim
         "sortBy": sort_by,
         "apiKey": api_key,
         "domains": domains,
+        "pageSize": limit,
     }
 
     response = requests.get(url, params=parameters)
 
     if response.status_code == 200:
         data = response.json()
-        articles = data["articles"][:limit]
+        articles = data["articles"]
         return articles
     else:
         print('Failed to retrieve news data')

@@ -29,9 +29,9 @@ if time_series:
     if percentage_change is not None:
         arrow = "🔺" if percentage_change > 0 else "🔻"
         percentage_change_str = f"{arrow}{percentage_change:.2f}%"
-
+        print(percentage_change_str)
         # When STOCK price increase/decreases by at least 5% between yesterday and the day before yesterday
-        if abs(percentage_change) >= 4:
+        if abs(percentage_change) >= 5:
             dates = get_last_two_dates(time_series)
             domains = [
                 "dowjones.com",
