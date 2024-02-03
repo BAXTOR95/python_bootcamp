@@ -1,0 +1,191 @@
+{
+    "id": "08d70a224db94dc7fa2332db_0|08d70a224db94dc7fa2332db_1",
+    "flyFrom": "MCO",
+    "flyTo": "MAD",
+    "cityFrom": "Orlando",
+    "cityCodeFrom": "ORL",
+    "cityTo": "Madrid",
+    "cityCodeTo": "MAD",
+    "countryFrom": {
+        "code": "US",
+        "name": "United States"
+    },
+    "countryTo": {
+        "code": "ES",
+        "name": "Spain"
+    },
+    "local_departure": "2024-06-23T22:30:00.000Z",
+    "utc_departure": "2024-06-24T02:30:00.000Z",
+    "local_arrival": "2024-06-24T13:10:00.000Z",
+    "utc_arrival": "2024-06-24T11:10:00.000Z",
+    "nightsInDest": 13,
+    "quality": 966.380962,
+    "distance": 7033.57,
+    "duration": {
+        "departure": 31200,
+        "return": 34200,
+        "total": 65400
+    },
+    "price": 861,
+    "conversion": {
+        "EUR": 797.04805246261,
+        "USD": 861
+    },
+    "fare": {
+        "adults": 861,
+        "children": 861,
+        "infants": 861
+    },
+    "fare_locks": {
+        "EUR": [
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 997.048052,
+                "itinerary_price_remaining": 797.048052,
+                "fare_lock_kind": "fee",
+                "price": 39.852403,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 997.048052,
+                "itinerary_price_remaining": 797.048052,
+                "fare_lock_kind": "fee",
+                "price": 199.262013,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 997.048052,
+                "itinerary_price_remaining": 797.048052,
+                "fare_lock_kind": "fee",
+                "price": 79.704805,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            }
+        ],
+        "USD": [
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 1077.0472,
+                "itinerary_price_remaining": 861,
+                "fare_lock_kind": "fee",
+                "price": 43.05,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 1077.0472,
+                "itinerary_price_remaining": 861,
+                "fare_lock_kind": "fee",
+                "price": 215.25,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 1077.0472,
+                "itinerary_price_remaining": 861,
+                "fare_lock_kind": "fee",
+                "price": 86.1,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            }
+        ]
+    },
+    "bags_price": {
+        "1": 240,
+        "2": 540
+    },
+    "baglimit": {
+        "hand_height": 40,
+        "hand_length": 50,
+        "hand_weight": 10,
+        "hand_width": 25,
+        "hold_dimensions_sum": 158,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 23,
+        "hold_width": 28
+    },
+    "availability": {
+        "seats": 3
+    },
+    "airlines": [
+        "E9"
+    ],
+    "route": [
+        {
+            "id": "08d70a224db94dc7fa2332db_0",
+            "combination_id": "08d70a224db94dc7fa2332db",
+            "flyFrom": "MCO",
+            "flyTo": "MAD",
+            "cityFrom": "Orlando",
+            "cityCodeFrom": "ORL",
+            "cityTo": "Madrid",
+            "cityCodeTo": "MAD",
+            "local_departure": "2024-06-23T22:30:00.000Z",
+            "utc_departure": "2024-06-24T02:30:00.000Z",
+            "local_arrival": "2024-06-24T13:10:00.000Z",
+            "utc_arrival": "2024-06-24T11:10:00.000Z",
+            "airline": "E9",
+            "flight_no": 872,
+            "operating_carrier": "E9",
+            "operating_flight_no": "872",
+            "fare_basis": "ZLB0R",
+            "fare_category": "M",
+            "fare_classes": "Z",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "08d70a224db94dc7fa2332db_1",
+            "combination_id": "08d70a224db94dc7fa2332db",
+            "flyFrom": "MAD",
+            "flyTo": "MCO",
+            "cityFrom": "Madrid",
+            "cityCodeFrom": "MAD",
+            "cityTo": "Orlando",
+            "cityCodeTo": "ORL",
+            "local_departure": "2024-07-07T17:00:00.000Z",
+            "utc_departure": "2024-07-07T15:00:00.000Z",
+            "local_arrival": "2024-07-07T20:30:00.000Z",
+            "utc_arrival": "2024-07-08T00:30:00.000Z",
+            "airline": "E9",
+            "flight_no": 871,
+            "operating_carrier": "E9",
+            "operating_flight_no": "871",
+            "fare_basis": "VLB0R",
+            "fare_category": "M",
+            "fare_classes": "V",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        }
+    ],
+    "booking_token": "GBCYlf9O-7PvaqrfyVoveQ2dqkJjSqNDDLxbGxXdRLorVvkenNUqBQ74rEQTxlkZVojV0FBr8w3dTRIw7vCpmEsTtHi-y6GUt8P4-Orx5i6XV6G06Nyk0SGmKwalI6G99OdRewn57aVtCniSm-Xv0iTHZl4rhLiyjx0Sv8pGPQy8E42UDW0YVZAbUBsOiHwXbDq702_qwL8FZcUnaC2UgPXjzeaY6UInMCre9nugm6yYQ7F7QTtF67DwS9s20IBkTiuJmEwIegPrLtUTi6v1gCG-WO7n5h8LkCLgFkk-hYT2Ounb-SxQSgYDBZFXrTsZLofv2f3L8F8FRpShDp_9UEO-kGPPuLIkpPMzgH0DHvdJvClCe4e9eL-P-WrCkbXp3qcYMZwaBg7FpVRqRdPSusG6YPWkK02nm4LJDtBFtn_58dUkyQIKDB0CwmHlykWi_Pux39XxIkjYqOjRKv0mFgZV1ZMnFikAe-lgEw4-oaniV3CnTNkbiYvDtTJejW_i5FGWkaePXOBqzBOe0hjkETQcWMwO3jLayCYyFICyjfI7K2-aV0vsWPqgYstdiTBq_v_dpWPobHweKDjvuRYgUJ-Ifjsznv9lbwB6q3oPh11xwhubVhXICXx4jlIm7lfGVuzZwAGuhuVDUDCF4EgvBT3jvIob9PNxpecrdjEeVw0XA719gGv6GEN1Qz68z-cBDVtmnwTXut7FokHPgfcZNZq-8DE5QmGwYLKFhrySSV_Lq82BhUth8jtVU3mFPcDgBd_FRGcFVDid9TpITlHruAuwdXhTM98E1miVH1d_pbo0=",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d70a224db94dc7fa2332db_0%7C08d70a224db94dc7fa2332db_1&from=MCO&lang=en&passengers=1&to=MAD&booking_token=GBCYlf9O-7PvaqrfyVoveQ2dqkJjSqNDDLxbGxXdRLorVvkenNUqBQ74rEQTxlkZVojV0FBr8w3dTRIw7vCpmEsTtHi-y6GUt8P4-Orx5i6XV6G06Nyk0SGmKwalI6G99OdRewn57aVtCniSm-Xv0iTHZl4rhLiyjx0Sv8pGPQy8E42UDW0YVZAbUBsOiHwXbDq702_qwL8FZcUnaC2UgPXjzeaY6UInMCre9nugm6yYQ7F7QTtF67DwS9s20IBkTiuJmEwIegPrLtUTi6v1gCG-WO7n5h8LkCLgFkk-hYT2Ounb-SxQSgYDBZFXrTsZLofv2f3L8F8FRpShDp_9UEO-kGPPuLIkpPMzgH0DHvdJvClCe4e9eL-P-WrCkbXp3qcYMZwaBg7FpVRqRdPSusG6YPWkK02nm4LJDtBFtn_58dUkyQIKDB0CwmHlykWi_Pux39XxIkjYqOjRKv0mFgZV1ZMnFikAe-lgEw4-oaniV3CnTNkbiYvDtTJejW_i5FGWkaePXOBqzBOe0hjkETQcWMwO3jLayCYyFICyjfI7K2-aV0vsWPqgYstdiTBq_v_dpWPobHweKDjvuRYgUJ-Ifjsznv9lbwB6q3oPh11xwhubVhXICXx4jlIm7lfGVuzZwAGuhuVDUDCF4EgvBT3jvIob9PNxpecrdjEeVw0XA719gGv6GEN1Qz68z-cBDVtmnwTXut7FokHPgfcZNZq-8DE5QmGwYLKFhrySSV_Lq82BhUth8jtVU3mFPcDgBd_FRGcFVDid9TpITlHruAuwdXhTM98E1miVH1d_pbo0=",
+    "facilitated_booking_available": true,
+    "pnr_count": 1,
+    "has_airport_change": false,
+    "technical_stops": 0,
+    "throw_away_ticketing": false,
+    "hidden_city_ticketing": false,
+    "virtual_interlining": false
+}

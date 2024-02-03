@@ -1,0 +1,195 @@
+{
+    "id": "08d722ee4d7c00001dee7667_0|22ee08d74d8b00003c5fcbdf_0",
+    "flyFrom": "MCO",
+    "flyTo": "LGA",
+    "cityFrom": "Orlando",
+    "cityCodeFrom": "ORL",
+    "cityTo": "New York",
+    "cityCodeTo": "NYC",
+    "countryFrom": {
+        "code": "US",
+        "name": "United States"
+    },
+    "countryTo": {
+        "code": "US",
+        "name": "United States"
+    },
+    "local_departure": "2024-04-23T05:15:00.000Z",
+    "utc_departure": "2024-04-23T09:15:00.000Z",
+    "local_arrival": "2024-04-23T07:52:00.000Z",
+    "utc_arrival": "2024-04-23T11:52:00.000Z",
+    "nightsInDest": 15,
+    "quality": 131.074763,
+    "distance": 1532.67,
+    "duration": {
+        "departure": 9420,
+        "return": 10020,
+        "total": 19440
+    },
+    "price": 69,
+    "conversion": {
+        "EUR": 63.87493103358896,
+        "USD": 69
+    },
+    "fare": {
+        "adults": 69,
+        "children": 69,
+        "infants": 69
+    },
+    "fare_locks": {
+        "EUR": [
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 263.874931,
+                "itinerary_price_remaining": 63.874931,
+                "fare_lock_kind": "fee",
+                "price": 10,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 263.874931,
+                "itinerary_price_remaining": 63.874931,
+                "fare_lock_kind": "fee",
+                "price": 25,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 263.874931,
+                "itinerary_price_remaining": 63.874931,
+                "fare_lock_kind": "fee",
+                "price": 5,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ],
+        "USD": [
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 285.0472,
+                "itinerary_price_remaining": 69,
+                "fare_lock_kind": "fee",
+                "price": 10.80236,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 285.0472,
+                "itinerary_price_remaining": 69,
+                "fare_lock_kind": "fee",
+                "price": 27.0059,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 285.0472,
+                "itinerary_price_remaining": 69,
+                "fare_lock_kind": "fee",
+                "price": 5.40118,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ]
+    },
+    "bags_price": {
+        "1": 172.41,
+        "2": 380.90999999999997
+    },
+    "baglimit": {
+        "hand_height": 46,
+        "hand_length": 56,
+        "hand_weight": 10,
+        "hand_width": 25,
+        "hold_dimensions_sum": 158,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 18,
+        "hold_width": 28,
+        "personal_item_height": 35,
+        "personal_item_length": 45,
+        "personal_item_weight": 10,
+        "personal_item_width": 20
+    },
+    "availability": {
+        "seats": null
+    },
+    "airlines": [
+        "NK"
+    ],
+    "route": [
+        {
+            "id": "08d722ee4d7c00001dee7667_0",
+            "combination_id": "08d722ee4d7c00001dee7667",
+            "flyFrom": "MCO",
+            "flyTo": "LGA",
+            "cityFrom": "Orlando",
+            "cityCodeFrom": "ORL",
+            "cityTo": "New York",
+            "cityCodeTo": "NYC",
+            "local_departure": "2024-04-23T05:15:00.000Z",
+            "utc_departure": "2024-04-23T09:15:00.000Z",
+            "local_arrival": "2024-04-23T07:52:00.000Z",
+            "utc_arrival": "2024-04-23T11:52:00.000Z",
+            "airline": "NK",
+            "flight_no": 316,
+            "operating_carrier": "NK",
+            "operating_flight_no": "316",
+            "fare_basis": "WA14V2",
+            "fare_category": "M",
+            "fare_classes": "W",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "22ee08d74d8b00003c5fcbdf_0",
+            "combination_id": "22ee08d74d8b00003c5fcbdf",
+            "flyFrom": "LGA",
+            "flyTo": "MCO",
+            "cityFrom": "New York",
+            "cityCodeFrom": "NYC",
+            "cityTo": "Orlando",
+            "cityCodeTo": "ORL",
+            "local_departure": "2024-05-08T06:30:00.000Z",
+            "utc_departure": "2024-05-08T10:30:00.000Z",
+            "local_arrival": "2024-05-08T09:17:00.000Z",
+            "utc_arrival": "2024-05-08T13:17:00.000Z",
+            "airline": "NK",
+            "flight_no": 1350,
+            "operating_carrier": "NK",
+            "operating_flight_no": "1350",
+            "fare_basis": "WA14V2",
+            "fare_category": "M",
+            "fare_classes": "W",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        }
+    ],
+    "booking_token": "GHcNb0giQ6wy9UiueANB0G96b32NJxQLi5tiliuEPn-wcfFxH-TQvtK2iogBtXN20e0c7JGP-ml0Aij8fiMhn8Fah9N6JCbNoJ4xYtT6h5Cl9UASmOSHrOuhjufcRy7-3dxqvbFQY9jGTG78lhnb5PN52xF_NGW9im6DKJVo0E5pghQnZMnl7FsNUvhUsOpGHt7UN3SVTB0HBlZa3qHclCj7rrvpMPMSBdInVye-TFwYYWpFHvnkoVSfFAzc_5PuBrhw-IA-K1bffpaT58N7duynC4gSfukojBj1HvKweOvKUERDzjKrEioTkc8WZdDxT8OEPKih2kic1SkI3zSPgeGAMZW2xO2TyKBoNJHyoGZGPFCOUuXNdQfT3p2QXuPk1rih8iJanYiFWjJDhJ0tc9UyiILhR9cm9EjXufqo1xqrz2T7OE7WSGGdZp3YDGmwKswRueNPQQZ6yrXfbRvsxETDOAFpXkePZeSuONH3KvXWn2br5zee4yU54mh90xrgtXprkNSNWIbM7x4CfoobLSQ6f2kttcvwumlbSTF3csh4tavGLhm7MHQ4UpNZNaF1wXd5R0DG73gF2ozWcdHhCO0xuDZxzJspUr7I-K15YZphEbCpKfB86yhk9em71vLzxsAbteF22Z1nFJ7WxhjQgPirEf1qSqNOjqPNatylf_fZnoWCINijG07_mReq5EFZ2UGCUuarIlMgCNiw-sgZ4jT89hIPX3VJYgM8u-0udvNwpYaZy_vrhjTAVvZ3ln-7Dbj__MxAbnzqQArA_UZBKt2OGB15lZiEVRMKtsF9Ry-aApTpRp33OE4rBHpg4SLx0T_tPd8ztLxBnjGoqQw_JgRMy4a1hlK8NJgCNbUcmRE0=",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d722ee4d7c00001dee7667_0%7C22ee08d74d8b00003c5fcbdf_0&from=MCO&lang=en&passengers=1&to=LGA&booking_token=GHcNb0giQ6wy9UiueANB0G96b32NJxQLi5tiliuEPn-wcfFxH-TQvtK2iogBtXN20e0c7JGP-ml0Aij8fiMhn8Fah9N6JCbNoJ4xYtT6h5Cl9UASmOSHrOuhjufcRy7-3dxqvbFQY9jGTG78lhnb5PN52xF_NGW9im6DKJVo0E5pghQnZMnl7FsNUvhUsOpGHt7UN3SVTB0HBlZa3qHclCj7rrvpMPMSBdInVye-TFwYYWpFHvnkoVSfFAzc_5PuBrhw-IA-K1bffpaT58N7duynC4gSfukojBj1HvKweOvKUERDzjKrEioTkc8WZdDxT8OEPKih2kic1SkI3zSPgeGAMZW2xO2TyKBoNJHyoGZGPFCOUuXNdQfT3p2QXuPk1rih8iJanYiFWjJDhJ0tc9UyiILhR9cm9EjXufqo1xqrz2T7OE7WSGGdZp3YDGmwKswRueNPQQZ6yrXfbRvsxETDOAFpXkePZeSuONH3KvXWn2br5zee4yU54mh90xrgtXprkNSNWIbM7x4CfoobLSQ6f2kttcvwumlbSTF3csh4tavGLhm7MHQ4UpNZNaF1wXd5R0DG73gF2ozWcdHhCO0xuDZxzJspUr7I-K15YZphEbCpKfB86yhk9em71vLzxsAbteF22Z1nFJ7WxhjQgPirEf1qSqNOjqPNatylf_fZnoWCINijG07_mReq5EFZ2UGCUuarIlMgCNiw-sgZ4jT89hIPX3VJYgM8u-0udvNwpYaZy_vrhjTAVvZ3ln-7Dbj__MxAbnzqQArA_UZBKt2OGB15lZiEVRMKtsF9Ry-aApTpRp33OE4rBHpg4SLx0T_tPd8ztLxBnjGoqQw_JgRMy4a1hlK8NJgCNbUcmRE0=",
+    "facilitated_booking_available": true,
+    "pnr_count": 2,
+    "has_airport_change": false,
+    "technical_stops": 0,
+    "throw_away_ticketing": false,
+    "hidden_city_ticketing": false,
+    "virtual_interlining": false
+}

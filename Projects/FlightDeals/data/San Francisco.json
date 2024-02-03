@@ -1,0 +1,191 @@
+{
+    "id": "08d70f9c4d7c000050b1f653_0|0f9c08d74d89000036ef80f2_0",
+    "flyFrom": "MCO",
+    "flyTo": "SFO",
+    "cityFrom": "Orlando",
+    "cityCodeFrom": "ORL",
+    "cityTo": "San Francisco",
+    "cityCodeTo": "SFO",
+    "countryFrom": {
+        "code": "US",
+        "name": "United States"
+    },
+    "countryTo": {
+        "code": "US",
+        "name": "United States"
+    },
+    "local_departure": "2024-04-23T18:31:00.000Z",
+    "utc_departure": "2024-04-23T22:31:00.000Z",
+    "local_arrival": "2024-04-23T21:33:00.000Z",
+    "utc_arrival": "2024-04-24T04:33:00.000Z",
+    "nightsInDest": 13,
+    "quality": 487.740614,
+    "distance": 3935.02,
+    "duration": {
+        "departure": 21720,
+        "return": 19500,
+        "total": 41220
+    },
+    "price": 402,
+    "conversion": {
+        "EUR": 372.1409025435183,
+        "USD": 402
+    },
+    "fare": {
+        "adults": 402,
+        "children": 402,
+        "infants": 402
+    },
+    "fare_locks": {
+        "EUR": [
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 572.140903,
+                "itinerary_price_remaining": 372.140903,
+                "fare_lock_kind": "fee",
+                "price": 37.21409,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 572.140903,
+                "itinerary_price_remaining": 372.140903,
+                "fare_lock_kind": "fee",
+                "price": 93.035226,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 572.140903,
+                "itinerary_price_remaining": 372.140903,
+                "fare_lock_kind": "fee",
+                "price": 18.607045,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ],
+        "USD": [
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 618.0472,
+                "itinerary_price_remaining": 402,
+                "fare_lock_kind": "fee",
+                "price": 40.2,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 618.0472,
+                "itinerary_price_remaining": 402,
+                "fare_lock_kind": "fee",
+                "price": 100.5,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 618.0472,
+                "itinerary_price_remaining": 402,
+                "fare_lock_kind": "fee",
+                "price": 20.1,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ]
+    },
+    "bags_price": {
+        "1": 83.31,
+        "2": 194.4
+    },
+    "baglimit": {
+        "hand_height": 43,
+        "hand_length": 61,
+        "hand_weight": 10,
+        "hand_width": 25,
+        "hold_dimensions_sum": 158,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 23,
+        "hold_width": 28
+    },
+    "availability": {
+        "seats": null
+    },
+    "airlines": [
+        "AS"
+    ],
+    "route": [
+        {
+            "id": "08d70f9c4d7c000050b1f653_0",
+            "combination_id": "08d70f9c4d7c000050b1f653",
+            "flyFrom": "MCO",
+            "flyTo": "SFO",
+            "cityFrom": "Orlando",
+            "cityCodeFrom": "ORL",
+            "cityTo": "San Francisco",
+            "cityCodeTo": "SFO",
+            "local_departure": "2024-04-23T18:31:00.000Z",
+            "utc_departure": "2024-04-23T22:31:00.000Z",
+            "local_arrival": "2024-04-23T21:33:00.000Z",
+            "utc_arrival": "2024-04-24T04:33:00.000Z",
+            "airline": "AS",
+            "flight_no": 399,
+            "operating_carrier": "AS",
+            "operating_flight_no": "399",
+            "fare_basis": "QH2OASBN",
+            "fare_category": "M",
+            "fare_classes": "M",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "0f9c08d74d89000036ef80f2_0",
+            "combination_id": "0f9c08d74d89000036ef80f2",
+            "flyFrom": "SFO",
+            "flyTo": "MCO",
+            "cityFrom": "San Francisco",
+            "cityCodeFrom": "SFO",
+            "cityTo": "Orlando",
+            "cityCodeTo": "ORL",
+            "local_departure": "2024-05-06T09:06:00.000Z",
+            "utc_departure": "2024-05-06T16:06:00.000Z",
+            "local_arrival": "2024-05-06T17:31:00.000Z",
+            "utc_arrival": "2024-05-06T21:31:00.000Z",
+            "airline": "AS",
+            "flight_no": 462,
+            "operating_carrier": "AS",
+            "operating_flight_no": "462",
+            "fare_basis": "",
+            "fare_category": "M",
+            "fare_classes": "X",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        }
+    ],
+    "booking_token": "GMHCf5W3LHWIoB-X3gSV41bbcUbqk0zluHOqpEmz1WPUplYERZByfO-qHAr7_STQHhp_SvERgn9oU0D7MzSOpwjxVXTJ9pg9qdTKMk_sF5nIYEkLnzg5A2oTBu5C1JvbDw-skQKV95mI1_b8Z5G2qAcIZ1Y1YtRoBV-PgHEr6z3kWlmq25rkX0cM9rOHb-tdSupgEYkBuncIHJYKzfbSY2Hr8LpSy6YofpoRxL55l6kCkZ_yFDmi_xQDPID4qR10Aih6_YxX5EBTAT-Z_XxmuqSKFsNKtwhV0VJcdHAHu9SWhsuQl-I_muzm4HJPaA-4vX3eh-y9nw-0tHfJ5jusP8mnmahzGFmObqCPqznGhV4lo_291KyI6gX498-IUKC9weaLOaMz75Etoba3Yz97wSZ4BcMPP8Zu5wFLJNtneygcvGjn0a5krzY7CVQY98t2-e7zIRRk1pUPJp3c3OUJnZ7r0xaPoyGw79kMkdzH-a50pKy1Y0ciskLvi3jQjI58lY7mj9kaVp6F1AzoEOB33PLx3XMuljlaTjtSL9W_3xe3ZckhAa6hzZIgxBw5zF43fKd8HReoXJ2HV14CNQF0UMCI_jcsdntd_1RxsH6I51oD8hG9-tavMIO70IqCTm1U8CimsnJTwAPQzZ_O8EZ2BQTyOSB8tTKXj4fd-Ecxjf5yIwYegRiK08SKyQkD0x-DwcPdj4-19xTqSPLUTjRmEKCKSlt9ANdzqBiMhxPcJB8RIGyP1jnp6mVb1uniItn4kKXLZ34x8-yLQ24LF2wgN_uOvCJKxuBYi-klVeyclvaUE4lmsZ34ILVMKBnRrTZGv5AwdMiskcaRehYdgEOeben6w4VjX6ArhnY6v0IRIDZU=",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d70f9c4d7c000050b1f653_0%7C0f9c08d74d89000036ef80f2_0&from=MCO&lang=en&passengers=1&to=SFO&booking_token=GMHCf5W3LHWIoB-X3gSV41bbcUbqk0zluHOqpEmz1WPUplYERZByfO-qHAr7_STQHhp_SvERgn9oU0D7MzSOpwjxVXTJ9pg9qdTKMk_sF5nIYEkLnzg5A2oTBu5C1JvbDw-skQKV95mI1_b8Z5G2qAcIZ1Y1YtRoBV-PgHEr6z3kWlmq25rkX0cM9rOHb-tdSupgEYkBuncIHJYKzfbSY2Hr8LpSy6YofpoRxL55l6kCkZ_yFDmi_xQDPID4qR10Aih6_YxX5EBTAT-Z_XxmuqSKFsNKtwhV0VJcdHAHu9SWhsuQl-I_muzm4HJPaA-4vX3eh-y9nw-0tHfJ5jusP8mnmahzGFmObqCPqznGhV4lo_291KyI6gX498-IUKC9weaLOaMz75Etoba3Yz97wSZ4BcMPP8Zu5wFLJNtneygcvGjn0a5krzY7CVQY98t2-e7zIRRk1pUPJp3c3OUJnZ7r0xaPoyGw79kMkdzH-a50pKy1Y0ciskLvi3jQjI58lY7mj9kaVp6F1AzoEOB33PLx3XMuljlaTjtSL9W_3xe3ZckhAa6hzZIgxBw5zF43fKd8HReoXJ2HV14CNQF0UMCI_jcsdntd_1RxsH6I51oD8hG9-tavMIO70IqCTm1U8CimsnJTwAPQzZ_O8EZ2BQTyOSB8tTKXj4fd-Ecxjf5yIwYegRiK08SKyQkD0x-DwcPdj4-19xTqSPLUTjRmEKCKSlt9ANdzqBiMhxPcJB8RIGyP1jnp6mVb1uniItn4kKXLZ34x8-yLQ24LF2wgN_uOvCJKxuBYi-klVeyclvaUE4lmsZ34ILVMKBnRrTZGv5AwdMiskcaRehYdgEOeben6w4VjX6ArhnY6v0IRIDZU=",
+    "facilitated_booking_available": true,
+    "pnr_count": 2,
+    "has_airport_change": false,
+    "technical_stops": 0,
+    "throw_away_ticketing": false,
+    "hidden_city_ticketing": false,
+    "virtual_interlining": false
+}

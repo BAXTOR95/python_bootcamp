@@ -74,7 +74,12 @@ def get_user_data():
     """
     try:
         with open(USER_DATA_PATH, 'r') as file:
-            return json.load(file)
+            # Use verify_user_data to check if the data is valid before returning
+            user_data = json.load(file)
+            if verify_user_data(user_data):
+                return user_data
+            else:
+                raise json.JSONDecodeError
     except (FileNotFoundError, json.JSONDecodeError):
         weight_kg = get_user_input("What's your weight in kg? ", 'float')
         height_cm = get_user_input("What's your height in cm? ", 'float')
@@ -86,6 +91,25 @@ def get_user_data():
             json.dump(data, file, indent=4)
 
         return data
+
+
+def verify_user_data(user_data):
+    """
+    Verifies that the user data is valid.
+
+    Args:
+        user_data (dict): The user's weight, height, and age.
+
+    Returns:
+        bool: True if the user data is valid, False otherwise.
+    """
+    if not all(key in user_data for key in ("weight_kg", "height_cm", "age")):
+        return False
+
+    if not all(isinstance(value, (int, float)) for value in user_data.values()):
+        return False
+
+    return True
 
 
 # Main Execution
