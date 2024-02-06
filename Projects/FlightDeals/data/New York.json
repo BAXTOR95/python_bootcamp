@@ -1,5 +1,5 @@
 {
-    "id": "08d722ee4d7c00001dee7667_0|22ee08d74d8b00003c5fcbdf_0",
+    "id": "08d722ee4d5a000094a7f7f1_0|22ee08d74d75000031283386_0",
     "flyFrom": "MCO",
     "flyTo": "LGA",
     "cityFrom": "Orlando",
@@ -14,21 +14,21 @@
         "code": "US",
         "name": "United States"
     },
-    "local_departure": "2024-04-23T05:15:00.000Z",
-    "utc_departure": "2024-04-23T09:15:00.000Z",
-    "local_arrival": "2024-04-23T07:52:00.000Z",
-    "utc_arrival": "2024-04-23T11:52:00.000Z",
-    "nightsInDest": 15,
-    "quality": 131.074763,
+    "local_departure": "2024-03-20T05:02:00.000Z",
+    "utc_departure": "2024-03-20T09:02:00.000Z",
+    "local_arrival": "2024-03-20T07:35:00.000Z",
+    "utc_arrival": "2024-03-20T11:35:00.000Z",
+    "nightsInDest": 27,
+    "quality": 132.465528,
     "distance": 1532.67,
     "duration": {
-        "departure": 9420,
-        "return": 10020,
-        "total": 19440
+        "departure": 9180,
+        "return": 10680,
+        "total": 19860
     },
     "price": 69,
     "conversion": {
-        "EUR": 63.87493103358896,
+        "EUR": 64.332365240011,
         "USD": 69
     },
     "fare": {
@@ -39,72 +39,72 @@
     "fare_locks": {
         "EUR": [
             {
-                "default": true,
-                "duration": "P3D",
-                "itinerary_price_limit": 263.874931,
-                "itinerary_price_remaining": 63.874931,
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 264.332365,
+                "itinerary_price_remaining": 64.332365,
                 "fare_lock_kind": "fee",
-                "price": 10,
-                "rule_instance_id": 26748,
+                "price": 5,
+                "rule_instance_id": 26749,
                 "version": "v1"
             },
             {
                 "default": false,
                 "duration": "P7D",
-                "itinerary_price_limit": 263.874931,
-                "itinerary_price_remaining": 63.874931,
+                "itinerary_price_limit": 264.332365,
+                "itinerary_price_remaining": 64.332365,
                 "fare_lock_kind": "fee",
                 "price": 25,
                 "rule_instance_id": 26750,
                 "version": "v1"
             },
             {
-                "default": false,
-                "duration": "P1D",
-                "itinerary_price_limit": 263.874931,
-                "itinerary_price_remaining": 63.874931,
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 264.332365,
+                "itinerary_price_remaining": 64.332365,
                 "fare_lock_kind": "fee",
-                "price": 5,
-                "rule_instance_id": 26749,
+                "price": 10,
+                "rule_instance_id": 26748,
                 "version": "v1"
             }
         ],
         "USD": [
             {
-                "default": true,
-                "duration": "P3D",
-                "itinerary_price_limit": 285.0472,
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 283.511,
                 "itinerary_price_remaining": 69,
                 "fare_lock_kind": "fee",
-                "price": 10.80236,
-                "rule_instance_id": 26748,
+                "price": 5.362775,
+                "rule_instance_id": 26749,
                 "version": "v1"
             },
             {
                 "default": false,
                 "duration": "P7D",
-                "itinerary_price_limit": 285.0472,
+                "itinerary_price_limit": 283.511,
                 "itinerary_price_remaining": 69,
                 "fare_lock_kind": "fee",
-                "price": 27.0059,
+                "price": 26.813875,
                 "rule_instance_id": 26750,
                 "version": "v1"
             },
             {
-                "default": false,
-                "duration": "P1D",
-                "itinerary_price_limit": 285.0472,
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 283.511,
                 "itinerary_price_remaining": 69,
                 "fare_lock_kind": "fee",
-                "price": 5.40118,
-                "rule_instance_id": 26749,
+                "price": 10.72555,
+                "rule_instance_id": 26748,
                 "version": "v1"
             }
         ]
     },
     "bags_price": {
-        "1": 172.41,
-        "2": 380.90999999999997
+        "1": 172.125,
+        "2": 382.005
     },
     "baglimit": {
         "hand_height": 46,
@@ -129,18 +129,18 @@
     ],
     "route": [
         {
-            "id": "08d722ee4d7c00001dee7667_0",
-            "combination_id": "08d722ee4d7c00001dee7667",
+            "id": "08d722ee4d5a000094a7f7f1_0",
+            "combination_id": "08d722ee4d5a000094a7f7f1",
             "flyFrom": "MCO",
             "flyTo": "LGA",
             "cityFrom": "Orlando",
             "cityCodeFrom": "ORL",
             "cityTo": "New York",
             "cityCodeTo": "NYC",
-            "local_departure": "2024-04-23T05:15:00.000Z",
-            "utc_departure": "2024-04-23T09:15:00.000Z",
-            "local_arrival": "2024-04-23T07:52:00.000Z",
-            "utc_arrival": "2024-04-23T11:52:00.000Z",
+            "local_departure": "2024-03-20T05:02:00.000Z",
+            "utc_departure": "2024-03-20T09:02:00.000Z",
+            "local_arrival": "2024-03-20T07:35:00.000Z",
+            "utc_arrival": "2024-03-20T11:35:00.000Z",
             "airline": "NK",
             "flight_no": 316,
             "operating_carrier": "NK",
@@ -156,18 +156,18 @@
             "vehicle_type": "aircraft"
         },
         {
-            "id": "22ee08d74d8b00003c5fcbdf_0",
-            "combination_id": "22ee08d74d8b00003c5fcbdf",
+            "id": "22ee08d74d75000031283386_0",
+            "combination_id": "22ee08d74d75000031283386",
             "flyFrom": "LGA",
             "flyTo": "MCO",
             "cityFrom": "New York",
             "cityCodeFrom": "NYC",
             "cityTo": "Orlando",
             "cityCodeTo": "ORL",
-            "local_departure": "2024-05-08T06:30:00.000Z",
-            "utc_departure": "2024-05-08T10:30:00.000Z",
-            "local_arrival": "2024-05-08T09:17:00.000Z",
-            "utc_arrival": "2024-05-08T13:17:00.000Z",
+            "local_departure": "2024-04-16T06:30:00.000Z",
+            "utc_departure": "2024-04-16T10:30:00.000Z",
+            "local_arrival": "2024-04-16T09:28:00.000Z",
+            "utc_arrival": "2024-04-16T13:28:00.000Z",
             "airline": "NK",
             "flight_no": 1350,
             "operating_carrier": "NK",
@@ -183,8 +183,8 @@
             "vehicle_type": "aircraft"
         }
     ],
-    "booking_token": "GHcNb0giQ6wy9UiueANB0G96b32NJxQLi5tiliuEPn-wcfFxH-TQvtK2iogBtXN20e0c7JGP-ml0Aij8fiMhn8Fah9N6JCbNoJ4xYtT6h5Cl9UASmOSHrOuhjufcRy7-3dxqvbFQY9jGTG78lhnb5PN52xF_NGW9im6DKJVo0E5pghQnZMnl7FsNUvhUsOpGHt7UN3SVTB0HBlZa3qHclCj7rrvpMPMSBdInVye-TFwYYWpFHvnkoVSfFAzc_5PuBrhw-IA-K1bffpaT58N7duynC4gSfukojBj1HvKweOvKUERDzjKrEioTkc8WZdDxT8OEPKih2kic1SkI3zSPgeGAMZW2xO2TyKBoNJHyoGZGPFCOUuXNdQfT3p2QXuPk1rih8iJanYiFWjJDhJ0tc9UyiILhR9cm9EjXufqo1xqrz2T7OE7WSGGdZp3YDGmwKswRueNPQQZ6yrXfbRvsxETDOAFpXkePZeSuONH3KvXWn2br5zee4yU54mh90xrgtXprkNSNWIbM7x4CfoobLSQ6f2kttcvwumlbSTF3csh4tavGLhm7MHQ4UpNZNaF1wXd5R0DG73gF2ozWcdHhCO0xuDZxzJspUr7I-K15YZphEbCpKfB86yhk9em71vLzxsAbteF22Z1nFJ7WxhjQgPirEf1qSqNOjqPNatylf_fZnoWCINijG07_mReq5EFZ2UGCUuarIlMgCNiw-sgZ4jT89hIPX3VJYgM8u-0udvNwpYaZy_vrhjTAVvZ3ln-7Dbj__MxAbnzqQArA_UZBKt2OGB15lZiEVRMKtsF9Ry-aApTpRp33OE4rBHpg4SLx0T_tPd8ztLxBnjGoqQw_JgRMy4a1hlK8NJgCNbUcmRE0=",
-    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d722ee4d7c00001dee7667_0%7C22ee08d74d8b00003c5fcbdf_0&from=MCO&lang=en&passengers=1&to=LGA&booking_token=GHcNb0giQ6wy9UiueANB0G96b32NJxQLi5tiliuEPn-wcfFxH-TQvtK2iogBtXN20e0c7JGP-ml0Aij8fiMhn8Fah9N6JCbNoJ4xYtT6h5Cl9UASmOSHrOuhjufcRy7-3dxqvbFQY9jGTG78lhnb5PN52xF_NGW9im6DKJVo0E5pghQnZMnl7FsNUvhUsOpGHt7UN3SVTB0HBlZa3qHclCj7rrvpMPMSBdInVye-TFwYYWpFHvnkoVSfFAzc_5PuBrhw-IA-K1bffpaT58N7duynC4gSfukojBj1HvKweOvKUERDzjKrEioTkc8WZdDxT8OEPKih2kic1SkI3zSPgeGAMZW2xO2TyKBoNJHyoGZGPFCOUuXNdQfT3p2QXuPk1rih8iJanYiFWjJDhJ0tc9UyiILhR9cm9EjXufqo1xqrz2T7OE7WSGGdZp3YDGmwKswRueNPQQZ6yrXfbRvsxETDOAFpXkePZeSuONH3KvXWn2br5zee4yU54mh90xrgtXprkNSNWIbM7x4CfoobLSQ6f2kttcvwumlbSTF3csh4tavGLhm7MHQ4UpNZNaF1wXd5R0DG73gF2ozWcdHhCO0xuDZxzJspUr7I-K15YZphEbCpKfB86yhk9em71vLzxsAbteF22Z1nFJ7WxhjQgPirEf1qSqNOjqPNatylf_fZnoWCINijG07_mReq5EFZ2UGCUuarIlMgCNiw-sgZ4jT89hIPX3VJYgM8u-0udvNwpYaZy_vrhjTAVvZ3ln-7Dbj__MxAbnzqQArA_UZBKt2OGB15lZiEVRMKtsF9Ry-aApTpRp33OE4rBHpg4SLx0T_tPd8ztLxBnjGoqQw_JgRMy4a1hlK8NJgCNbUcmRE0=",
+    "booking_token": "GswM0imVluD7rNU2-UVP0HaK_3E01lrl8Zcno5NII13LKTrxiuMsJp7U3L5iF6gh9n0PnDDy1oGb0bu5v81v2A000eDjpeBW8T-U_J4zKCR0GZP6aLmp696lNmbCHIcnuRKR2iKodoGZhRqcWKKVrNH3hxO5_MwBNBsqGqKgM9zfSTn8gg6O8AYP9zToDeb3JxCVt4TW7SOmhEysAcqaCrNJH_jJkTyAjYEImpQ4GIvBVsXRyqvnMrdi71ymYoh2Hq8snMuBIdkPxv7h39mqlWIjm4adngjtGLQAWwHLfkeW8fFS2QuL3yLYZhigeJgehRW-q5IsghNBx0C02ChW0RuWuRGMikyclCFB1JI38lS682iOOo8VnkwELIRCj9x9dcoLoRaCLiHK1J9qxZ-v6HV95lqoj7vdTYndrw5QKw5nxOix8KutmrczOqcXamO7E-li6ZGNwSKzzXZ6g2gpufnJtmqtkklqx8k8JkQGaXo8wKPsZcsUmVTxQ9NMvJLx7lB9H8zIJqgUDyTO7eRKqGTXnQ8WBDb-5T2AjVXUjbcJb-MyynQdAyGjUfC0ZsleLyMQ9MjI_IMixd-0J64iodjoG8ReP0hAQPufBirjER1BSC9PDr6cbPs4U6s_H_5GXpO6TRZmF191vumyfqnOyvqDE3tvBMP_5qbzG_FA0dmCrNv8-ttaDn_p1DhVy9ah-0_lT_cwY5mtPhLwIII871bXdv73h865OcZLsdLbiG5DF3hNYkPwXdtDCxuLRbr6MqkRNihQmM-NxPJDTQcaRi9InLbjz8sbRmqWaM6fE53WqMCOtkoHexTWuypKMhVRD3yOz6ykv3tMZO6hTQpzhrHM_g0b22_h1QOalJM0IxidtCfSXnIJKKOgbLG00NNp_fpuSFri5yvl35r6kdMF-Gw==",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d722ee4d5a000094a7f7f1_0%7C22ee08d74d75000031283386_0&from=MCO&lang=en&passengers=1&to=LGA&booking_token=GswM0imVluD7rNU2-UVP0HaK_3E01lrl8Zcno5NII13LKTrxiuMsJp7U3L5iF6gh9n0PnDDy1oGb0bu5v81v2A000eDjpeBW8T-U_J4zKCR0GZP6aLmp696lNmbCHIcnuRKR2iKodoGZhRqcWKKVrNH3hxO5_MwBNBsqGqKgM9zfSTn8gg6O8AYP9zToDeb3JxCVt4TW7SOmhEysAcqaCrNJH_jJkTyAjYEImpQ4GIvBVsXRyqvnMrdi71ymYoh2Hq8snMuBIdkPxv7h39mqlWIjm4adngjtGLQAWwHLfkeW8fFS2QuL3yLYZhigeJgehRW-q5IsghNBx0C02ChW0RuWuRGMikyclCFB1JI38lS682iOOo8VnkwELIRCj9x9dcoLoRaCLiHK1J9qxZ-v6HV95lqoj7vdTYndrw5QKw5nxOix8KutmrczOqcXamO7E-li6ZGNwSKzzXZ6g2gpufnJtmqtkklqx8k8JkQGaXo8wKPsZcsUmVTxQ9NMvJLx7lB9H8zIJqgUDyTO7eRKqGTXnQ8WBDb-5T2AjVXUjbcJb-MyynQdAyGjUfC0ZsleLyMQ9MjI_IMixd-0J64iodjoG8ReP0hAQPufBirjER1BSC9PDr6cbPs4U6s_H_5GXpO6TRZmF191vumyfqnOyvqDE3tvBMP_5qbzG_FA0dmCrNv8-ttaDn_p1DhVy9ah-0_lT_cwY5mtPhLwIII871bXdv73h865OcZLsdLbiG5DF3hNYkPwXdtDCxuLRbr6MqkRNihQmM-NxPJDTQcaRi9InLbjz8sbRmqWaM6fE53WqMCOtkoHexTWuypKMhVRD3yOz6ykv3tMZO6hTQpzhrHM_g0b22_h1QOalJM0IxidtCfSXnIJKKOgbLG00NNp_fpuSFri5yvl35r6kdMF-Gw==",
     "facilitated_booking_available": true,
     "pnr_count": 2,
     "has_airport_change": false,

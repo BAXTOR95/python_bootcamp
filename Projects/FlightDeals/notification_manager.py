@@ -1,4 +1,6 @@
 import os
+import smtplib
+
 from dotenv import load_dotenv
 from pathlib import Path
 from twilio.rest import Client
@@ -26,3 +28,23 @@ class NotificationManager:
             to=os.getenv("MY_PHONE_NUMBER"),
         )
         print(message.sid)
+
+    def send_email(self, message: str, email: str):
+        """Send an email with the given message.
+
+        Args:
+            message (str): The message to send.
+            email (str): The email to send the message to.
+        """
+        pass
+        # Implement email sending here
+        with smtplib.SMTP("smtp.gmail.com") as connection:
+            connection.starttls()
+            connection.login(
+                user=os.getenv("MY_EMAIL"), password=os.getenv("MAIL_APP_PASS")
+            )
+            connection.sendmail(
+                from_addr=os.getenv("MY_EMAIL"),
+                to_addrs=email,
+                msg=f"Subject:Low price alert!\n\n{message}",
+            )

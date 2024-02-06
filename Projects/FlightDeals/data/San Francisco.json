@@ -19,92 +19,92 @@
     "local_arrival": "2024-04-23T21:33:00.000Z",
     "utc_arrival": "2024-04-24T04:33:00.000Z",
     "nightsInDest": 13,
-    "quality": 487.740614,
+    "quality": 487.608606,
     "distance": 3935.02,
     "duration": {
         "departure": 21720,
         "return": 19500,
         "total": 41220
     },
-    "price": 402,
+    "price": 399,
     "conversion": {
-        "EUR": 372.1409025435183,
-        "USD": 402
+        "EUR": 372.0088946487593,
+        "USD": 399
     },
     "fare": {
-        "adults": 402,
-        "children": 402,
-        "infants": 402
+        "adults": 399,
+        "children": 399,
+        "infants": 399
     },
     "fare_locks": {
         "EUR": [
             {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 572.008895,
+                "itinerary_price_remaining": 372.008895,
+                "fare_lock_kind": "fee",
+                "price": 93.002224,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
                 "default": true,
                 "duration": "P3D",
-                "itinerary_price_limit": 572.140903,
-                "itinerary_price_remaining": 372.140903,
+                "itinerary_price_limit": 572.008895,
+                "itinerary_price_remaining": 372.008895,
                 "fare_lock_kind": "fee",
-                "price": 37.21409,
+                "price": 37.20089,
                 "rule_instance_id": 26748,
                 "version": "v1"
             },
             {
                 "default": false,
-                "duration": "P7D",
-                "itinerary_price_limit": 572.140903,
-                "itinerary_price_remaining": 372.140903,
-                "fare_lock_kind": "fee",
-                "price": 93.035226,
-                "rule_instance_id": 26750,
-                "version": "v1"
-            },
-            {
-                "default": false,
                 "duration": "P1D",
-                "itinerary_price_limit": 572.140903,
-                "itinerary_price_remaining": 372.140903,
+                "itinerary_price_limit": 572.008895,
+                "itinerary_price_remaining": 372.008895,
                 "fare_lock_kind": "fee",
-                "price": 18.607045,
+                "price": 18.600445,
                 "rule_instance_id": 26749,
                 "version": "v1"
             }
         ],
         "USD": [
             {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 613.511,
+                "itinerary_price_remaining": 399,
+                "fare_lock_kind": "fee",
+                "price": 99.75,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
                 "default": true,
                 "duration": "P3D",
-                "itinerary_price_limit": 618.0472,
-                "itinerary_price_remaining": 402,
+                "itinerary_price_limit": 613.511,
+                "itinerary_price_remaining": 399,
                 "fare_lock_kind": "fee",
-                "price": 40.2,
+                "price": 39.900001,
                 "rule_instance_id": 26748,
                 "version": "v1"
             },
             {
                 "default": false,
-                "duration": "P7D",
-                "itinerary_price_limit": 618.0472,
-                "itinerary_price_remaining": 402,
-                "fare_lock_kind": "fee",
-                "price": 100.5,
-                "rule_instance_id": 26750,
-                "version": "v1"
-            },
-            {
-                "default": false,
                 "duration": "P1D",
-                "itinerary_price_limit": 618.0472,
-                "itinerary_price_remaining": 402,
+                "itinerary_price_limit": 613.511,
+                "itinerary_price_remaining": 399,
                 "fare_lock_kind": "fee",
-                "price": 20.1,
+                "price": 19.95,
                 "rule_instance_id": 26749,
                 "version": "v1"
             }
         ]
     },
     "bags_price": {
-        "1": 83.31,
-        "2": 194.4
+        "1": 83.91,
+        "2": 195.78
     },
     "baglimit": {
         "hand_height": 43,
@@ -168,9 +168,9 @@
             "flight_no": 462,
             "operating_carrier": "AS",
             "operating_flight_no": "462",
-            "fare_basis": "",
+            "fare_basis": "QH2OASBN",
             "fare_category": "M",
-            "fare_classes": "X",
+            "fare_classes": "M",
             "return": 1,
             "bags_recheck_required": false,
             "vi_connection": false,
@@ -179,8 +179,8 @@
             "vehicle_type": "aircraft"
         }
     ],
-    "booking_token": "GMHCf5W3LHWIoB-X3gSV41bbcUbqk0zluHOqpEmz1WPUplYERZByfO-qHAr7_STQHhp_SvERgn9oU0D7MzSOpwjxVXTJ9pg9qdTKMk_sF5nIYEkLnzg5A2oTBu5C1JvbDw-skQKV95mI1_b8Z5G2qAcIZ1Y1YtRoBV-PgHEr6z3kWlmq25rkX0cM9rOHb-tdSupgEYkBuncIHJYKzfbSY2Hr8LpSy6YofpoRxL55l6kCkZ_yFDmi_xQDPID4qR10Aih6_YxX5EBTAT-Z_XxmuqSKFsNKtwhV0VJcdHAHu9SWhsuQl-I_muzm4HJPaA-4vX3eh-y9nw-0tHfJ5jusP8mnmahzGFmObqCPqznGhV4lo_291KyI6gX498-IUKC9weaLOaMz75Etoba3Yz97wSZ4BcMPP8Zu5wFLJNtneygcvGjn0a5krzY7CVQY98t2-e7zIRRk1pUPJp3c3OUJnZ7r0xaPoyGw79kMkdzH-a50pKy1Y0ciskLvi3jQjI58lY7mj9kaVp6F1AzoEOB33PLx3XMuljlaTjtSL9W_3xe3ZckhAa6hzZIgxBw5zF43fKd8HReoXJ2HV14CNQF0UMCI_jcsdntd_1RxsH6I51oD8hG9-tavMIO70IqCTm1U8CimsnJTwAPQzZ_O8EZ2BQTyOSB8tTKXj4fd-Ecxjf5yIwYegRiK08SKyQkD0x-DwcPdj4-19xTqSPLUTjRmEKCKSlt9ANdzqBiMhxPcJB8RIGyP1jnp6mVb1uniItn4kKXLZ34x8-yLQ24LF2wgN_uOvCJKxuBYi-klVeyclvaUE4lmsZ34ILVMKBnRrTZGv5AwdMiskcaRehYdgEOeben6w4VjX6ArhnY6v0IRIDZU=",
-    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d70f9c4d7c000050b1f653_0%7C0f9c08d74d89000036ef80f2_0&from=MCO&lang=en&passengers=1&to=SFO&booking_token=GMHCf5W3LHWIoB-X3gSV41bbcUbqk0zluHOqpEmz1WPUplYERZByfO-qHAr7_STQHhp_SvERgn9oU0D7MzSOpwjxVXTJ9pg9qdTKMk_sF5nIYEkLnzg5A2oTBu5C1JvbDw-skQKV95mI1_b8Z5G2qAcIZ1Y1YtRoBV-PgHEr6z3kWlmq25rkX0cM9rOHb-tdSupgEYkBuncIHJYKzfbSY2Hr8LpSy6YofpoRxL55l6kCkZ_yFDmi_xQDPID4qR10Aih6_YxX5EBTAT-Z_XxmuqSKFsNKtwhV0VJcdHAHu9SWhsuQl-I_muzm4HJPaA-4vX3eh-y9nw-0tHfJ5jusP8mnmahzGFmObqCPqznGhV4lo_291KyI6gX498-IUKC9weaLOaMz75Etoba3Yz97wSZ4BcMPP8Zu5wFLJNtneygcvGjn0a5krzY7CVQY98t2-e7zIRRk1pUPJp3c3OUJnZ7r0xaPoyGw79kMkdzH-a50pKy1Y0ciskLvi3jQjI58lY7mj9kaVp6F1AzoEOB33PLx3XMuljlaTjtSL9W_3xe3ZckhAa6hzZIgxBw5zF43fKd8HReoXJ2HV14CNQF0UMCI_jcsdntd_1RxsH6I51oD8hG9-tavMIO70IqCTm1U8CimsnJTwAPQzZ_O8EZ2BQTyOSB8tTKXj4fd-Ecxjf5yIwYegRiK08SKyQkD0x-DwcPdj4-19xTqSPLUTjRmEKCKSlt9ANdzqBiMhxPcJB8RIGyP1jnp6mVb1uniItn4kKXLZ34x8-yLQ24LF2wgN_uOvCJKxuBYi-klVeyclvaUE4lmsZ34ILVMKBnRrTZGv5AwdMiskcaRehYdgEOeben6w4VjX6ArhnY6v0IRIDZU=",
+    "booking_token": "GOYPGa-HDGp7jkqSqZaCcVNP_4c3AymY0bzlFqYnV0F7dxvZ6NF1Dx5p5VomqpzsvPFNQbJIn6zs4rk77d63onExF5-Hz3fOUC7MnsNIrg3hQYfaKQYL4QlRN4WXu-0mZFNIzNjlYuuPtHyee21qxt6pJZi7tlj2mhxEObl8FkSaoxCsjoi3UiQyyKCqaYGsl95cTRWTFXO4Ge9R5w2YyjKfJAvM2pOcOw_J7HRMndMmaJ-QqP_IdrhAA4OxCtLkBY0Vh0W6hYzztp-NRQUyU1-Gjck4xEk-lUQh8DJ27NZY57EOcWxIqXM3R_mMuNVjLBetZknRs88mKr3qmboKKoH9kz8L093_D7xg8zr8cfWItpnP9PZJtEVuu0QBHO_f-ISiOW9RRaM7DZ5UCYyrnP88dMLkdDchzbBcUMipK-tUYJvS0PxkRWA0Z7W8OeVA5V0hdSb586n7LKJGM0NC_WR9gQNFi44maUuQllNfPdVxJKkh-DXBxUkKL-yyTPY_RMYOkqOJ1khXhtqSeZ0zZZZiuF9bz5UUXARPEmy6GYhvgRUkUDZvdCtdyzwI3pUohztftebltP1PkqUlEWUrAhcMd7JnZSrKEVeopkAeScLSa_pBbyvSjCGy6nG2IGY3Hc8D_dw_cgPCjzaDhH7FdMX-HuFRqftKsnXCqaNmta9vLdxZkC1iUJo3Ewz2YogW-3Jam8AYis-fUWfUBiLy2vsKQmnBDHoVyTtmrsQ7CmF6xg8u8okrXac5DUDFALJmCSDqsLnL5CpiaqIzPS8o5mwF_73L2EfH_pZKO2ymCS7tsK4lkqQZ5DbAsu4Kqy84yTH9e2tKeV0-UgKYqMunCx-vjRSvoBBoNKUpcDJAqaT735uShWc07b8mjpOsafrf3",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d70f9c4d7c000050b1f653_0%7C0f9c08d74d89000036ef80f2_0&from=MCO&lang=en&passengers=1&to=SFO&booking_token=GOYPGa-HDGp7jkqSqZaCcVNP_4c3AymY0bzlFqYnV0F7dxvZ6NF1Dx5p5VomqpzsvPFNQbJIn6zs4rk77d63onExF5-Hz3fOUC7MnsNIrg3hQYfaKQYL4QlRN4WXu-0mZFNIzNjlYuuPtHyee21qxt6pJZi7tlj2mhxEObl8FkSaoxCsjoi3UiQyyKCqaYGsl95cTRWTFXO4Ge9R5w2YyjKfJAvM2pOcOw_J7HRMndMmaJ-QqP_IdrhAA4OxCtLkBY0Vh0W6hYzztp-NRQUyU1-Gjck4xEk-lUQh8DJ27NZY57EOcWxIqXM3R_mMuNVjLBetZknRs88mKr3qmboKKoH9kz8L093_D7xg8zr8cfWItpnP9PZJtEVuu0QBHO_f-ISiOW9RRaM7DZ5UCYyrnP88dMLkdDchzbBcUMipK-tUYJvS0PxkRWA0Z7W8OeVA5V0hdSb586n7LKJGM0NC_WR9gQNFi44maUuQllNfPdVxJKkh-DXBxUkKL-yyTPY_RMYOkqOJ1khXhtqSeZ0zZZZiuF9bz5UUXARPEmy6GYhvgRUkUDZvdCtdyzwI3pUohztftebltP1PkqUlEWUrAhcMd7JnZSrKEVeopkAeScLSa_pBbyvSjCGy6nG2IGY3Hc8D_dw_cgPCjzaDhH7FdMX-HuFRqftKsnXCqaNmta9vLdxZkC1iUJo3Ewz2YogW-3Jam8AYis-fUWfUBiLy2vsKQmnBDHoVyTtmrsQ7CmF6xg8u8okrXac5DUDFALJmCSDqsLnL5CpiaqIzPS8o5mwF_73L2EfH_pZKO2ymCS7tsK4lkqQZ5DbAsu4Kqy84yTH9e2tKeV0-UgKYqMunCx-vjRSvoBBoNKUpcDJAqaT735uShWc07b8mjpOsafrf3",
     "facilitated_booking_available": true,
     "pnr_count": 2,
     "has_airport_change": false,

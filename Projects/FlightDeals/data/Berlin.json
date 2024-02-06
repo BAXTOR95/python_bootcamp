@@ -1,0 +1,249 @@
+{
+    "id": "08d722f54d430000ed3753b2_0|22f500424d44000076ee0285_0|004222f54d5400003267c931_0|22f508d74d540000129604d9_0",
+    "flyFrom": "MCO",
+    "flyTo": "BER",
+    "cityFrom": "Orlando",
+    "cityCodeFrom": "ORL",
+    "cityTo": "Berlin",
+    "cityCodeTo": "BER",
+    "countryFrom": {
+        "code": "US",
+        "name": "United States"
+    },
+    "countryTo": {
+        "code": "DE",
+        "name": "Germany"
+    },
+    "local_departure": "2024-02-26T20:25:00.000Z",
+    "utc_departure": "2024-02-27T01:25:00.000Z",
+    "local_arrival": "2024-02-27T22:35:00.000Z",
+    "utc_arrival": "2024-02-27T21:35:00.000Z",
+    "nightsInDest": 16,
+    "quality": 761.804179,
+    "distance": 7860.42,
+    "duration": {
+        "departure": 72600,
+        "return": 61800,
+        "total": 134400
+    },
+    "price": 471,
+    "conversion": {
+        "EUR": 439.13831924703163,
+        "USD": 471
+    },
+    "fare": {
+        "adults": 471,
+        "children": 471,
+        "infants": 471
+    },
+    "fare_locks": {
+        "EUR": [
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 639.138319,
+                "itinerary_price_remaining": 439.138319,
+                "fare_lock_kind": "fee",
+                "price": 109.78458,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 639.138319,
+                "itinerary_price_remaining": 439.138319,
+                "fare_lock_kind": "fee",
+                "price": 43.913832,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 639.138319,
+                "itinerary_price_remaining": 439.138319,
+                "fare_lock_kind": "fee",
+                "price": 21.956916,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ],
+        "USD": [
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 685.511,
+                "itinerary_price_remaining": 471,
+                "fare_lock_kind": "fee",
+                "price": 117.75,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 685.511,
+                "itinerary_price_remaining": 471,
+                "fare_lock_kind": "fee",
+                "price": 47.1,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 685.511,
+                "itinerary_price_remaining": 471,
+                "fare_lock_kind": "fee",
+                "price": 23.55,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            }
+        ]
+    },
+    "bags_price": {
+        "1": 311.01
+    },
+    "baglimit": {
+        "hand_height": 45,
+        "hand_length": 56,
+        "hand_weight": 10,
+        "hand_width": 25,
+        "hold_dimensions_sum": 158,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 15,
+        "hold_width": 28,
+        "personal_item_height": 30,
+        "personal_item_length": 40,
+        "personal_item_weight": 10,
+        "personal_item_width": 15
+    },
+    "availability": {
+        "seats": 6
+    },
+    "airlines": [
+        "Z0",
+        "U2"
+    ],
+    "route": [
+        {
+            "id": "08d722f54d430000ed3753b2_0",
+            "combination_id": "08d722f54d430000ed3753b2",
+            "flyFrom": "MCO",
+            "flyTo": "LGW",
+            "cityFrom": "Orlando",
+            "cityCodeFrom": "ORL",
+            "cityTo": "London",
+            "cityCodeTo": "LON",
+            "local_departure": "2024-02-26T20:25:00.000Z",
+            "utc_departure": "2024-02-27T01:25:00.000Z",
+            "local_arrival": "2024-02-27T10:00:00.000Z",
+            "utc_arrival": "2024-02-27T10:00:00.000Z",
+            "airline": "Z0",
+            "flight_no": 784,
+            "operating_carrier": "",
+            "operating_flight_no": "",
+            "fare_basis": "",
+            "fare_category": "M",
+            "fare_classes": "",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "22f500424d44000076ee0285_0",
+            "combination_id": "22f500424d44000076ee0285",
+            "flyFrom": "LGW",
+            "flyTo": "BER",
+            "cityFrom": "London",
+            "cityCodeFrom": "LON",
+            "cityTo": "Berlin",
+            "cityCodeTo": "BER",
+            "local_departure": "2024-02-27T19:45:00.000Z",
+            "utc_departure": "2024-02-27T19:45:00.000Z",
+            "local_arrival": "2024-02-27T22:35:00.000Z",
+            "utc_arrival": "2024-02-27T21:35:00.000Z",
+            "airline": "U2",
+            "flight_no": 8631,
+            "operating_carrier": "EC",
+            "operating_flight_no": "",
+            "fare_basis": "",
+            "fare_category": "M",
+            "fare_classes": "",
+            "return": 0,
+            "bags_recheck_required": true,
+            "vi_connection": true,
+            "guarantee": true,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "004222f54d5400003267c931_0",
+            "combination_id": "004222f54d5400003267c931",
+            "flyFrom": "BER",
+            "flyTo": "LGW",
+            "cityFrom": "Berlin",
+            "cityCodeFrom": "BER",
+            "cityTo": "London",
+            "cityCodeTo": "LON",
+            "local_departure": "2024-03-14T07:15:00.000Z",
+            "utc_departure": "2024-03-14T06:15:00.000Z",
+            "local_arrival": "2024-03-14T08:10:00.000Z",
+            "utc_arrival": "2024-03-14T08:10:00.000Z",
+            "airline": "U2",
+            "flight_no": 8628,
+            "operating_carrier": "EC",
+            "operating_flight_no": "",
+            "fare_basis": "",
+            "fare_category": "M",
+            "fare_classes": "",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "22f508d74d540000129604d9_0",
+            "combination_id": "22f508d74d540000129604d9",
+            "flyFrom": "LGW",
+            "flyTo": "MCO",
+            "cityFrom": "London",
+            "cityCodeFrom": "LON",
+            "cityTo": "Orlando",
+            "cityCodeTo": "ORL",
+            "local_departure": "2024-03-14T14:00:00.000Z",
+            "utc_departure": "2024-03-14T14:00:00.000Z",
+            "local_arrival": "2024-03-14T19:25:00.000Z",
+            "utc_arrival": "2024-03-14T23:25:00.000Z",
+            "airline": "Z0",
+            "flight_no": 783,
+            "operating_carrier": "",
+            "operating_flight_no": "",
+            "fare_basis": "",
+            "fare_category": "M",
+            "fare_classes": "",
+            "return": 1,
+            "bags_recheck_required": true,
+            "vi_connection": true,
+            "guarantee": true,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        }
+    ],
+    "booking_token": "GnlwhPFuITasxqPslOnP60EDf2l-dJkbUp92I-xGOkYnRwWwiiDFfoeraZjOmmeCyOTosqlnCFxYlq1rDUdiF2l9epl-hhGatvOLTdcWt3Lg4KvwVpeEUB7KR_AoEGZZvuwFqb_we4EUw0WiaLBSag2NZfxKb-g-xtGrD5aD0FrZ5Qh9Z1hgndqG-9Rf4u7fQmaeRflOcpSxawDvUj-KvGPtKfexYaQBcsc5Ij4E7KR0gCGeAK35JLyPHJVhHVpw1-Mfx6whNpHulXIGTndSXovd3Py0PKyK5JpTObSR_yNa-jgXsyrOCTBCExQoNr0NBa_-Usj4gTXNk9b-h9TdbH55mkEc5cRN7VbGy_prB6GWu-B7PvHfwMYFwPQutqaBJX3-VebBHWBlbcL_c13HC0o5G8TtyYiNuB4S72kNFbjECgzPDdS7qHbgtl5SpOSdFlFwLGuf0_zQlXpqadR7ynLqDE8VJFGy1Zvydw4OMUda4kW-A1dbxdfwNrrb-JB1fasUZD9pftXg_e2b7QOiCvDl-3wIi1_rLPUlug5R8iXXTvnlUJtP5Jf5Ivo16hXVIlbatg9C4swIz8DlC_5E-F1DuqxbwRFID2hYTpgwg8EJR2jKDrkiNKdia4nvzWUfQMz2b3wSWK_VmYO2kyM02tf69v3HEDZN6FVyrWzajUGcX68IK-HwM802IyJy32GxjDTg39ZAVaDxeqY95gH1wtmgd67R66u7zSqDkwIC9GKWxms4yUN6eYY0wcEhxJQhyCjZb_2D4iDJrwW1J2y4y7BYDmshngiiLXwr6p3mTPYeFu7kVRgKEJOcrOL_86VRTW1Qyq-h9wNHHl0Dcsz9i99aUyx9rgBOp_ofzGErDEygcYKBVUKKkmXYTMm1JhKhaZQZSLjwRl2SIyO7AFnrHGSBJsoip893Rh1t-zW4sybkJTLTgOLKJWzatj-HcexSqGcroXXVxWflbl6xF2bxr1CgLjej3AG3g-xAY0AiaoiAWngX0MKAl6PZ0D7A-dQpNd2976_OZwvsTL4wnWp3Aw3gzNQo-FMvt8gsdbXMgk5XwvC51cLRDwMENZaIcSQvh",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d722f54d430000ed3753b2_0%7C22f500424d44000076ee0285_0%7C004222f54d5400003267c931_0%7C22f508d74d540000129604d9_0&from=MCO&lang=en&passengers=1&to=BER&booking_token=GnlwhPFuITasxqPslOnP60EDf2l-dJkbUp92I-xGOkYnRwWwiiDFfoeraZjOmmeCyOTosqlnCFxYlq1rDUdiF2l9epl-hhGatvOLTdcWt3Lg4KvwVpeEUB7KR_AoEGZZvuwFqb_we4EUw0WiaLBSag2NZfxKb-g-xtGrD5aD0FrZ5Qh9Z1hgndqG-9Rf4u7fQmaeRflOcpSxawDvUj-KvGPtKfexYaQBcsc5Ij4E7KR0gCGeAK35JLyPHJVhHVpw1-Mfx6whNpHulXIGTndSXovd3Py0PKyK5JpTObSR_yNa-jgXsyrOCTBCExQoNr0NBa_-Usj4gTXNk9b-h9TdbH55mkEc5cRN7VbGy_prB6GWu-B7PvHfwMYFwPQutqaBJX3-VebBHWBlbcL_c13HC0o5G8TtyYiNuB4S72kNFbjECgzPDdS7qHbgtl5SpOSdFlFwLGuf0_zQlXpqadR7ynLqDE8VJFGy1Zvydw4OMUda4kW-A1dbxdfwNrrb-JB1fasUZD9pftXg_e2b7QOiCvDl-3wIi1_rLPUlug5R8iXXTvnlUJtP5Jf5Ivo16hXVIlbatg9C4swIz8DlC_5E-F1DuqxbwRFID2hYTpgwg8EJR2jKDrkiNKdia4nvzWUfQMz2b3wSWK_VmYO2kyM02tf69v3HEDZN6FVyrWzajUGcX68IK-HwM802IyJy32GxjDTg39ZAVaDxeqY95gH1wtmgd67R66u7zSqDkwIC9GKWxms4yUN6eYY0wcEhxJQhyCjZb_2D4iDJrwW1J2y4y7BYDmshngiiLXwr6p3mTPYeFu7kVRgKEJOcrOL_86VRTW1Qyq-h9wNHHl0Dcsz9i99aUyx9rgBOp_ofzGErDEygcYKBVUKKkmXYTMm1JhKhaZQZSLjwRl2SIyO7AFnrHGSBJsoip893Rh1t-zW4sybkJTLTgOLKJWzatj-HcexSqGcroXXVxWflbl6xF2bxr1CgLjej3AG3g-xAY0AiaoiAWngX0MKAl6PZ0D7A-dQpNd2976_OZwvsTL4wnWp3Aw3gzNQo-FMvt8gsdbXMgk5XwvC51cLRDwMENZaIcSQvh",
+    "facilitated_booking_available": true,
+    "pnr_count": 4,
+    "has_airport_change": false,
+    "technical_stops": 0,
+    "throw_away_ticketing": false,
+    "hidden_city_ticketing": false,
+    "virtual_interlining": true
+}

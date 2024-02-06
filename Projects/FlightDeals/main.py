@@ -31,9 +31,17 @@ for row in sheet_data:
             f"Comparing found price ({flight_data.price}) vs lowest price previously known ({row['lowestPrice']})"
         )
         if flight_data.price < row["lowestPrice"]:
-            print("New lowest price found. Sending alert...")
+            print("New lowest price found. Updating Google Sheet...")
+            data_manager.update_price(row["id"], flight_data.price)
+            print("Sending alert...")
             notification_manager = NotificationManager()
-            notification_manager.send_sms(
-                message=f"Low price alert! Only ${flight_data.price} to fly from {flight_data.departure_city}-{flight_data.departure_airport_iata_code} to {flight_data.arrival_city}-{flight_data.arrival_airport_iata_code}, from {flight_data.outbound_date} to {flight_data.inbound_date}."
-            )
+            message = f"Low price alert! Only ${flight_data.price} to fly from {flight_data.departure_city}-{flight_data.departure_airport_iata_code} to {flight_data.arrival_city}-{flight_data.arrival_airport_iata_code}, from {flight_data.outbound_date} to {flight_data.inbound_date}."
+            if flight_data.has_stop_overs():
+                message += (
+                    f"\nFlight has the city of {flight_data.via_city} as layover."
+                )
+            notification_manager.send_sms(message=message)
+            user_data = data_manager.get_user_data()
+            for user in user_data:
+                notification_manager.send_email(message=message, email=user["email"])
             print("Alert sent.")

@@ -1,0 +1,245 @@
+{
+    "id": "08d7209f4d4b4d5a9bcbcb48_0|08d7209f4d4b4d5a9bcbcb48_1|08d7209f4d4b4d5a9bcbcb48_2|08d7209f4d4b4d5a9bcbcb48_3",
+    "flyFrom": "MCO",
+    "flyTo": "NRT",
+    "cityFrom": "Orlando",
+    "cityCodeFrom": "ORL",
+    "cityTo": "Tokyo",
+    "cityCodeTo": "TYO",
+    "countryFrom": {
+        "code": "US",
+        "name": "United States"
+    },
+    "countryTo": {
+        "code": "JP",
+        "name": "Japan"
+    },
+    "local_departure": "2024-03-05T07:18:00.000Z",
+    "utc_departure": "2024-03-05T12:18:00.000Z",
+    "local_arrival": "2024-03-06T15:00:00.000Z",
+    "utc_arrival": "2024-03-06T06:00:00.000Z",
+    "nightsInDest": 14,
+    "quality": 1360.473989,
+    "distance": 11660.51,
+    "duration": {
+        "departure": 63720,
+        "return": 56040,
+        "total": 119760
+    },
+    "price": 1148,
+    "conversion": {
+        "EUR": 1070.3413810946759,
+        "USD": 1148
+    },
+    "fare": {
+        "adults": 1148,
+        "children": 1148,
+        "infants": 1148
+    },
+    "fare_locks": {
+        "EUR": [
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 1270.341381,
+                "itinerary_price_remaining": 1070.341381,
+                "fare_lock_kind": "fee",
+                "price": 53.517069,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 1270.341381,
+                "itinerary_price_remaining": 1070.341381,
+                "fare_lock_kind": "fee",
+                "price": 267.585345,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 1270.341381,
+                "itinerary_price_remaining": 1070.341381,
+                "fare_lock_kind": "fee",
+                "price": 107.034138,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            }
+        ],
+        "USD": [
+            {
+                "default": false,
+                "duration": "P1D",
+                "itinerary_price_limit": 1362.511,
+                "itinerary_price_remaining": 1148,
+                "fare_lock_kind": "fee",
+                "price": 57.4,
+                "rule_instance_id": 26749,
+                "version": "v1"
+            },
+            {
+                "default": false,
+                "duration": "P7D",
+                "itinerary_price_limit": 1362.511,
+                "itinerary_price_remaining": 1148,
+                "fare_lock_kind": "fee",
+                "price": 287,
+                "rule_instance_id": 26750,
+                "version": "v1"
+            },
+            {
+                "default": true,
+                "duration": "P3D",
+                "itinerary_price_limit": 1362.511,
+                "itinerary_price_remaining": 1148,
+                "fare_lock_kind": "fee",
+                "price": 114.8,
+                "rule_instance_id": 26748,
+                "version": "v1"
+            }
+        ]
+    },
+    "bags_price": {
+        "1": 48.945,
+        "2": 251.73
+    },
+    "baglimit": {
+        "hold_dimensions_sum": 157,
+        "hold_height": 52,
+        "hold_length": 78,
+        "hold_weight": 23,
+        "hold_width": 27,
+        "personal_item_height": 25,
+        "personal_item_length": 43,
+        "personal_item_weight": 5,
+        "personal_item_width": 20
+    },
+    "availability": {
+        "seats": 9
+    },
+    "airlines": [
+        "UA"
+    ],
+    "route": [
+        {
+            "id": "08d7209f4d4b4d5a9bcbcb48_0",
+            "combination_id": "08d7209f4d4b4d5a9bcbcb48",
+            "flyFrom": "MCO",
+            "flyTo": "ORD",
+            "cityFrom": "Orlando",
+            "cityCodeFrom": "ORL",
+            "cityTo": "Chicago",
+            "cityCodeTo": "CHI",
+            "local_departure": "2024-03-05T07:18:00.000Z",
+            "utc_departure": "2024-03-05T12:18:00.000Z",
+            "local_arrival": "2024-03-05T09:28:00.000Z",
+            "utc_arrival": "2024-03-05T15:28:00.000Z",
+            "airline": "UA",
+            "flight_no": 1957,
+            "operating_carrier": "UA",
+            "operating_flight_no": "1957",
+            "fare_basis": "SLX73SX4",
+            "fare_category": "M",
+            "fare_classes": "S",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "08d7209f4d4b4d5a9bcbcb48_1",
+            "combination_id": "08d7209f4d4b4d5a9bcbcb48",
+            "flyFrom": "ORD",
+            "flyTo": "NRT",
+            "cityFrom": "Chicago",
+            "cityCodeFrom": "CHI",
+            "cityTo": "Tokyo",
+            "cityCodeTo": "TYO",
+            "local_departure": "2024-03-05T10:30:00.000Z",
+            "utc_departure": "2024-03-05T16:30:00.000Z",
+            "local_arrival": "2024-03-06T15:00:00.000Z",
+            "utc_arrival": "2024-03-06T06:00:00.000Z",
+            "airline": "UA",
+            "flight_no": 7938,
+            "operating_carrier": "NH",
+            "operating_flight_no": "11",
+            "fare_basis": "SLX73SX4",
+            "fare_category": "M",
+            "fare_classes": "S",
+            "return": 0,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "08d7209f4d4b4d5a9bcbcb48_2",
+            "combination_id": "08d7209f4d4b4d5a9bcbcb48",
+            "flyFrom": "NRT",
+            "flyTo": "IAH",
+            "cityFrom": "Tokyo",
+            "cityCodeFrom": "TYO",
+            "cityTo": "Houston",
+            "cityCodeTo": "HOU",
+            "local_departure": "2024-03-20T17:05:00.000Z",
+            "utc_departure": "2024-03-20T08:05:00.000Z",
+            "local_arrival": "2024-03-20T14:55:00.000Z",
+            "utc_arrival": "2024-03-20T19:55:00.000Z",
+            "airline": "UA",
+            "flight_no": 6,
+            "operating_carrier": "UA",
+            "operating_flight_no": "6",
+            "fare_basis": "SLX73SX4",
+            "fare_category": "M",
+            "fare_classes": "S",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        },
+        {
+            "id": "08d7209f4d4b4d5a9bcbcb48_3",
+            "combination_id": "08d7209f4d4b4d5a9bcbcb48",
+            "flyFrom": "IAH",
+            "flyTo": "MCO",
+            "cityFrom": "Houston",
+            "cityCodeFrom": "HOU",
+            "cityTo": "Orlando",
+            "cityCodeTo": "ORL",
+            "local_departure": "2024-03-20T16:20:00.000Z",
+            "utc_departure": "2024-03-20T21:20:00.000Z",
+            "local_arrival": "2024-03-20T19:39:00.000Z",
+            "utc_arrival": "2024-03-20T23:39:00.000Z",
+            "airline": "UA",
+            "flight_no": 2212,
+            "operating_carrier": "UA",
+            "operating_flight_no": "2212",
+            "fare_basis": "SLX73SX4",
+            "fare_category": "M",
+            "fare_classes": "S",
+            "return": 1,
+            "bags_recheck_required": false,
+            "vi_connection": false,
+            "guarantee": false,
+            "equipment": null,
+            "vehicle_type": "aircraft"
+        }
+    ],
+    "booking_token": "G7MMIotyjDYne0UIXhdAt-tq1TD1y967Y3iS8DZuRJ5-JoIV4VtQj7kJUo6ZVpMIeixaLiNUIVOT47qXLMt6v4JLeGNUzB5LN6VVRUxhMONjVApY6qNwAtcgq_A73q5JvdTyuTCiHGknWYdivSZ6rAfNca2nJp2D6y4i4muj0TyQKE5WbH3eRp0u26lcn6JXErHWsENByF0h3bj9jz3g_O4Ti2df3INUeQchhOblvezSUOLDqs1iFyZovP62TD9gRljUZB-qjBB5C87xcSeTZYBw3Du5PVdEmm-MkrP6kXbtdNt4ED3C6cnxUxgjl913D7jERaCFgSCK8-_OtIjTZTSdOR9eCpCgxW8RuZJJANjx_lhPej4FXx1a4UIZwSaoJqFZe8ttj1Im7_ybfT2hssuZsU3BDDXXi-0Lb3SbAXxYdn4rfW5olcPplAWirOLMs9BxFgat2uY6ARL3KjQYe9HUo90tL2GSz6HPUDnNvpcLOEyVoVZ-QOFTw-GXaJKtlK2jNHqKMjlEDNr06topo5nrus81CXzEnpJtL0_PK_WHf1e-gXtHVPnWf8NAGWDBhOX9bMqCyDFsXPHxARKg9VyyVHpsF2hg0FIwhQxqa5YTEIpDh0l4HO77keTWCvWr1nWa2l0CxFIIMhScIwutAosO1Q6aVIkvdd5W6bRpmpD2jI8ljh8KehCxdnbxelGd4u8x2owyTJAi4f7QV8s_VcVWOQBBwCvRx1IGbfyDizpLMe6MU9jUSI62HDXkiYQvclcWnc9qfANEQj-3_ooLgHRxXhiDZTY3YrucTMTLm3BhlQKSxdtd1JVGAnmF3OypQPltpKAesLDaE5eTDeJ_EpNy09dcGvsKcpRHWuYdaJDs=",
+    "deep_link": "https://www.kiwi.com/deep?affilid=baxtor95flightsearch&currency=USD&flightsId=08d7209f4d4b4d5a9bcbcb48_0%7C08d7209f4d4b4d5a9bcbcb48_1%7C08d7209f4d4b4d5a9bcbcb48_2%7C08d7209f4d4b4d5a9bcbcb48_3&from=MCO&lang=en&passengers=1&to=NRT&booking_token=G7MMIotyjDYne0UIXhdAt-tq1TD1y967Y3iS8DZuRJ5-JoIV4VtQj7kJUo6ZVpMIeixaLiNUIVOT47qXLMt6v4JLeGNUzB5LN6VVRUxhMONjVApY6qNwAtcgq_A73q5JvdTyuTCiHGknWYdivSZ6rAfNca2nJp2D6y4i4muj0TyQKE5WbH3eRp0u26lcn6JXErHWsENByF0h3bj9jz3g_O4Ti2df3INUeQchhOblvezSUOLDqs1iFyZovP62TD9gRljUZB-qjBB5C87xcSeTZYBw3Du5PVdEmm-MkrP6kXbtdNt4ED3C6cnxUxgjl913D7jERaCFgSCK8-_OtIjTZTSdOR9eCpCgxW8RuZJJANjx_lhPej4FXx1a4UIZwSaoJqFZe8ttj1Im7_ybfT2hssuZsU3BDDXXi-0Lb3SbAXxYdn4rfW5olcPplAWirOLMs9BxFgat2uY6ARL3KjQYe9HUo90tL2GSz6HPUDnNvpcLOEyVoVZ-QOFTw-GXaJKtlK2jNHqKMjlEDNr06topo5nrus81CXzEnpJtL0_PK_WHf1e-gXtHVPnWf8NAGWDBhOX9bMqCyDFsXPHxARKg9VyyVHpsF2hg0FIwhQxqa5YTEIpDh0l4HO77keTWCvWr1nWa2l0CxFIIMhScIwutAosO1Q6aVIkvdd5W6bRpmpD2jI8ljh8KehCxdnbxelGd4u8x2owyTJAi4f7QV8s_VcVWOQBBwCvRx1IGbfyDizpLMe6MU9jUSI62HDXkiYQvclcWnc9qfANEQj-3_ooLgHRxXhiDZTY3YrucTMTLm3BhlQKSxdtd1JVGAnmF3OypQPltpKAesLDaE5eTDeJ_EpNy09dcGvsKcpRHWuYdaJDs=",
+    "facilitated_booking_available": true,
+    "pnr_count": 1,
+    "has_airport_change": false,
+    "technical_stops": 0,
+    "throw_away_ticketing": false,
+    "hidden_city_ticketing": false,
+    "virtual_interlining": false
+}
