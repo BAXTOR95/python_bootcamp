@@ -42,19 +42,6 @@ df = pd.DataFrame(data)
 sorted_df = df.sort_values(by="upvotes", ascending=False)
 print(sorted_df)
 
-# create a list of dictionaries for each articles with their texts, links and upvotes
-# articles_info = []
-# for i in range(len(article_texts)):
-#     articles_info.append(
-#         {
-#             "title": article_texts[i],
-#             "link": article_links[i],
-#             "upvotes": article_upvotes[i],
-#         }
-#     )
-
-# print(articles_info)
-
 
 # with open("website.html", encoding='utf-8') as file:
 #     contents = file.read()
