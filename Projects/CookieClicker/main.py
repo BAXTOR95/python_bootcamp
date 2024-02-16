@@ -44,7 +44,7 @@ def buy_best_upgrade(driver, current_cookies):
 
 
 def get_cookies_second(driver):
-    """Returns the current number of cookies per second as an integer."""
+    """Returns the current number of cookies per second as a float."""
     return float(driver.find_element(By.ID, value="cps").text.split()[-1])
 
 
