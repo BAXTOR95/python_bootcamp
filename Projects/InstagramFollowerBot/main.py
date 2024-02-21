@@ -11,13 +11,16 @@ INSTAGRAM_PASSWORD = os.getenv("INSTAGRAM_PASSWORD")
 
 
 def main():
+    # ask the user to input the account to follow
+    account_to_follow = input("Enter the account to follow: ").lower()
+
     instagram_bot = InstagramBot()
 
     # Log in to Instagram
     instagram_bot.login(INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD)
 
     # Navigate to a user
-    instagram_bot.find_follower("nasa")
+    instagram_bot.find_follower(account_to_follow)
 
     # # Quit the driver
     instagram_bot.quit_driver()

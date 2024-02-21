@@ -61,6 +61,7 @@ class InstagramBot:
             )
         )
         followers_button.click()
+        time.sleep(2)
         follow_buttons = WebDriverWait(self.driver, 10).until(
             EC.presence_of_all_elements_located(
                 (By.XPATH, "//div[text()='Follow']/ancestor::button")
