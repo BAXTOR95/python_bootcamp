@@ -1,0 +1,10 @@
+.feature-icon {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 0.75rem;
+}
+
+.carousel-caption {
+	color: #ffffff !important; /* Makes the text color white */
+	text-shadow: 2px 2px 4px #000000; /* This will add a dark shadow around your text */
+}
