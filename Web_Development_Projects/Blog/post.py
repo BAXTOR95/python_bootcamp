@@ -11,7 +11,7 @@ class Post:
         body (str): The main content body of the post.
     """
 
-    def __init__(self, post_id, title, subtitle, body):
+    def __init__(self, post_id, title, subtitle, author, image, body):
         """
         Initializes a new instance of the Post class.
 
@@ -19,11 +19,15 @@ class Post:
             post_id (int): The unique identifier for the post.
             title (str): The title of the post.
             subtitle (str): The subtitle of the post.
+            author (str): The author of the post.
+            image (str): The name of the image to display with the post.
             body (str): The main content of the post.
         """
         self.id = post_id
         self.title = title
         self.subtitle = subtitle
+        self.author = author
+        self.image = image
         self.body = body
 
     def __repr__(self):
@@ -35,7 +39,7 @@ class Post:
         return f'{self.title} - {self.subtitle}'
 
     @classmethod
-    def all_posts(cls, url="https://api.npoint.io/c790b4d5cab58020d391"):
+    def all_posts(cls, url="https://api.npoint.io/1be06ecaaa3d4d3eabc1"):
         """
         Fetches all posts from a given URL and returns them as Post instances.
 
@@ -56,7 +60,7 @@ class Post:
             return []
 
         all_posts = response.json()
-        return [cls(post['id'], post['title'], post['subtitle'], post['body']) for post in all_posts]
+        return [cls(post['id'], post['title'], post['subtitle'], post['author'], post['image'], post['body']) for post in all_posts]
 
 # Example usage:
 if __name__ == "__main__":

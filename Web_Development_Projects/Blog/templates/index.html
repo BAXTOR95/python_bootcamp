@@ -1,34 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Title</title>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Raleway"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="{{ url_for('static', filename='css/styles.css') }}"
-		/>
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="top">
-				<div class="title"><h1>My Blog</h1></div>
-			</div>
-			{% for post in posts %}
-			<div class="content">
-				<div class="card">
-					<h2>{{post.title}}</h2>
-					<p class="text">{{post.subtitle}}</p>
-					<a href="{{ url_for('post', post_id=post.id) }}">Read</a>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</body>
-	<footer>
-		<p>Made with ♥️.</p>
-	</footer>
-</html>
+{% extends "layout.html" %}
+<!-- Page Title-->
+{% block title %}Brian's Blog{% endblock %}
+<!-- Page Header-->
+{% block header %}
+<!-- Header-->
+<div class="site-heading">
+	<h1>Brian's Blog</h1>
+	<span class="subheading">A Blog by Brian Arriaga</span>
+</div>
+{% endblock %}
+
+<!-- Main Content-->
+{% block content %}
+<!-- Post preview-->
+{% for post in posts %}
+<div class="post-preview">
+	<a href="{{ url_for('post', post_id=post.id) }}">
+		<h2 class="post-title">{{ post.title }}</h2>
+		<h3 class="post-subtitle">{{ post.subtitle }}</h3>
+	</a>
+	<p class="post-meta">
+		Posted by
+		<a href="#!">{{ post.author }}</a>
+		on {{ date }}
+	</p>
+</div>
+<!-- Divider-->
+<hr class="my-4" />
+{% endfor %}
+<!-- Pager-->
+<div class="d-flex justify-content-end mb-4">
+	<a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a>
+</div>
+{% endblock %}
