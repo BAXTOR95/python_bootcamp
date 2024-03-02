@@ -27,3 +27,29 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollPos = currentTop;
     });
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+    const submitButton = document.getElementById('submitButton');
+    const form = document.getElementById('contactForm');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const message = document.getElementById('message');
+
+    // Initially disable the submit button
+    submitButton.disabled = true;
+
+    // Function to check the validity of the form
+    function validateForm() {
+        // Check each input field to see if it's valid
+        const isValid = name.value.trim() !== '' && email.value.trim() !== '' && phone.value.trim() !== '' && message.value.trim() !== '' && email.checkValidity();
+
+        // Enable or disable the submit button based on the form validity
+        submitButton.disabled = !isValid;
+    }
+
+    // Attach event listeners to input fields to validate the form on input
+    [name, email, phone, message].forEach(input => {
+        input.addEventListener('input', validateForm);
+    });
+});
