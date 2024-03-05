@@ -6,6 +6,7 @@ autopep8==2.0.1
 Babel==2.14.0
 beautifulsoup4==4.12.3
 blinker==1.7.0
+Bootstrap-Flask==2.3.3
 bs4==0.0.2
 certifi==2023.11.17
 cffi==1.16.0

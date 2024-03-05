@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="jumbotron bg-light border-bottom shadow-sm">
+  <div class="container py-5">
+    <h1 class="display-4">Welcome!</h1>
+    <p class="lead">Are you ready to discover my secret?</p>
+    <hr class="my-4">
+    <p>Access exclusive content by logging in. Join us and start your journey today.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a>
+  </div>
+</div>
+{% endblock %}

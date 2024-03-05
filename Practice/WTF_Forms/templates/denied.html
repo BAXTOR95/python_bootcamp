@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Access Denied{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+    .container {
+        text-align: center;
+        padding-top: 50px; /* Adds vertical space for better visual separation */
+    }
+    .giphy-embed {
+        margin-top: 20px;
+        border-radius: 8px; /* Adds rounded corners */
+        box-shadow: 0 4px 8px rgba(0,0,0,.1); /* Adds a light shadow for depth */
+    }
+    .source-link {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 0.9rem;
+        color: #007bff; /* Matches Bootstrap's primary color */
+    }
+    .source-link:hover {
+        text-decoration: none; /* Cleaner look on hover */
+        color: #0056b3; /* Darker shade for better contrast on hover */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Access Denied</h1>
+    <p class="lead">Sorry, you do not have permission to view this content.</p>
+    <iframe
+        src="https://giphy.com/embed/1xeVd1vr43nHO"
+        width="480"
+        height="271"
+        frameborder="0"
+        class="giphy-embed"
+        allowfullscreen
+    ></iframe>
+    <p>
+        <a class="source-link" href="https://giphy.com/gifs/cheezburger-funny-dog-fails-1xeVd1vr43nHO">via GIPHY</a>
+    </p>
+</div>
+{% endblock %}

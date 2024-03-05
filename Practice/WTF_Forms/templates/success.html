@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Success{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+    .container {
+        text-align: center;
+        padding-top: 50px; /* Adds space on the top for breathing room */
+    }
+    .giphy-embed {
+        margin-top: 20px;
+        border-radius: 8px; /* Adds rounded corners to the iframe */
+        box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Adds a subtle shadow for depth */
+    }
+    .source-link {
+        margin-top: 15px;
+        display: inline-block; /* Centers the link under the iframe */
+        font-size: 0.9rem; /* Adjusts the font size for subtlety */
+        color: #007bff; /* Bootstrap primary color for consistency */
+    }
+    .source-link:hover {
+        text-decoration: none; /* Removes underline on hover for a cleaner look */
+        color: #0056b3; /* Darker shade of primary color on hover */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-4">Top Secret</h1>
+    <p class="lead">Congratulations, you've found the secret!</p> <!-- Adds a lead paragraph for context -->
+    <iframe
+        src="https://giphy.com/embed/Ju7l5y9osyymQ"
+        width="480"
+        height="360"
+        frameborder="0"
+        class="giphy-embed"
+        allowfullscreen
+    ></iframe>
+    <p>
+        <a class="source-link" href="https://giphy.com/gifs/rick-astley-Ju7l5y9osyymQ">via GIPHY</a>
+    </p>
+</div>
+{% endblock %}

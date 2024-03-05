@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Login{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<style>
+	.container {
+		margin-top: 50px;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Login</h1>
+    {{ render_form(form) }}
+</div>
+
+{% endblock %}
