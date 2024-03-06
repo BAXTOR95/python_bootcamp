@@ -18,15 +18,6 @@ class CafeForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
-# Exercise:
-# add: Location URL, open time, closing time, coffee rating, wifi rating, power outlet rating fields
-# make coffee/wifi/power a select element with choice of 0 to 5.
-# e.g. You could use emojis ☕️/💪/✘/🔌
-# make all fields required except submit
-# use a validator to check that the URL field has a URL entered.
-# ---------------------------------------------------------------------------
-
-
 class CafeForm(FlaskForm):
     cafe = StringField('Cafe name', validators=[DataRequired()])
     location = StringField(
@@ -91,7 +82,9 @@ def add_cafe():
     form = CafeForm()
     if form.validate_on_submit():
         with open('cafe-data.csv', mode='a', newline='', encoding='utf-8') as csv_file:
-            csv_writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            csv_writer = csv.writer(
+                csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL
+            )
             csv_writer.writerow(
                 [
                     form.cafe.data.strip(),
