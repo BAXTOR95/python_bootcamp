@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Select Movie{% endblock %}
+
+{% block content %}
+<div class="container">
+	<h1 class="heading">Select Movie</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  {% for movie in movies_data %}
+    <div class="movie">
+      <p>
+        <a href="{{ url_for('select_movie', title=movie.title, year=movie.release_date[:4], description=movie.overview, img_url=movie.poster_path) }}">
+          {{ movie.title }} - {{ movie.release_date }}</a>
+      </p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
