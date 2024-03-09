@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container py-5">
 	<div class="row justify-content-center">
-		<div class="col-lg-8">
+		<div class="col-md-10 col-lg-8">
 			<h1 class="text-center mb-4">Add a New Movie</h1>
 
 			{% with messages = get_flashed_messages(with_categories=true) %}
@@ -20,7 +20,7 @@
                 {% endif %}
             {% endwith %}
 
-            {{ render_form(form, novalidate=True, form_inline_classes='needs-validation', button_map={'submit': 'btn btn-primary'}) }}
+            {{ render_form(form, novalidate=True, form_inline_classes='needs-validation' , button_map={'submit': 'btn btn-primary'}) }}
 
 			<div class="text-center mt-4">
 				<a href="{{ url_for('home') }}" class="btn btn-outline-secondary"
