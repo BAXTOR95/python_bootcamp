@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+<!-- Page Title-->
+{% block title %}{{ title }}{% endblock %}
+<!-- Head Content-->
+{% block head %}
+{{ super() }}
+{{ ckeditor.load() }}
+{{ ckeditor.config(name='body') }}
+{% endblock %}
+<!-- Page Header-->
+{% block header %}
+<div class="page-heading">
+  <h1>{{ 'New Post' if act == 'new_post' else 'Edit Post' }}</h1>
+  <span class="subheading"
+    >You're going to {{ 'make' if act == 'new_post' else 'edit' }} a great blog post!</span
+  >
+</div>
+{% endblock %}
+<!-- Post Content-->
+<main class="mb-4">
+  {% block content %}
+  <div class="my-5">
+		<form id="newPost" method="post" action="{{ url_for(act, post_id=post_id if act == 'edit_post' else None) }}">
+			{{ form.hidden_tag() }}
+			<div class="form-floating">
+				{{ form.title(class="form-control" + (" is-invalid" if form.title.errors else ""), placeholder="Enter the title of the post...") }}
+				<label for="title">Title</label>
+				{% if form.title.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.title.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<div class="form-floating">
+				{{ form.subtitle(class="form-control" + (" is-invalid" if form.subtitle.errors else ""), placeholder="Enter the subtitle of the post...") }}
+				<label for="subtitle">Subtitle</label>
+				{% if form.subtitle.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.subtitle.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<div class="form-floating">
+				{{ form.author(class="form-control" + (" is-invalid" if form.author.errors else ""), placeholder="Enter the author's name...") }}
+				<label for="author">Author</label>
+				{% if form.author.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.author.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+      <div class="form-floating">
+				{{ form.img_url(class="form-control" + (" is-invalid" if form.img_url.errors else ""), placeholder="Enter the image url...") }}
+				<label for="img_url">Image URL</label>
+				{% if form.img_url.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.img_url.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+      <br/>
+			<div class="form-floating">
+				{{ form.body(class="form-control", placeholder="Enter your post content
+				here...") }}
+				{% if form.body.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.body.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<br>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					{% for category, message in messages %}
+						<div class="alert {{ 'alert-success' if category == 'success' else 'alert-danger' }} alert-dismissible fade show text-center mb-3" role="alert">
+							{{ message }}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+			<!-- Submit Button -->
+			{{ form.submit(class="btn btn-primary text-uppercase") }}
+		</form>
+	</div>
+  {% endblock %}
+</main>
+
