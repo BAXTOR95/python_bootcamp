@@ -10,10 +10,8 @@ from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email, Length, URL
 from dotenv import load_dotenv
 from flask_ckeditor import CKEditor, CKEditorField
-from flask_ckeditor.utils import cleanify
 from datetime import date
 from notification_manager import NotificationManager
-from post import Post
 from config import Config
 
 app = Flask(__name__)
@@ -58,12 +56,6 @@ def get_post(post_id):
     stmt = db.select(BlogPost).where(BlogPost.id == post_id)
     return db.session.execute(stmt).scalar()
 
-
-# TODO: add_new_post() to create a new blog post
-
-# TODO: edit_post() to change an existing blog post
-
-# TODO: delete_post() to remove a blog post from the database
 
 if not app.config['SECRET_KEY']:
     raise ValueError("No CSRF_KEY set for Flask application")
@@ -198,6 +190,7 @@ def edit_post(post_id):
         )
     return redirect(url_for('index'))
 
+
 @app.route('/delete-post/<int:post_id>')
 def delete_post(post_id):
     post = db.session.get(BlogPost, post_id)
@@ -206,6 +199,7 @@ def delete_post(post_id):
         db.session.commit()
         flash('Post deleted!', 'success')
     return redirect(url_for('index'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
