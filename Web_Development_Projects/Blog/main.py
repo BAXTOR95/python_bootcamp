@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import List
 from datetime import datetime
-from flask import Flask, render_template, redirect, url_for, flash
+from flask import Flask, render_template, redirect, url_for, flash, abort
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
@@ -20,7 +20,7 @@ from flask_login import (
     current_user,
     logout_user,
 )
-from flask_gravatar import Gravatar
+from hashlib import md5
 from config import Config
 
 # Import commands
@@ -41,17 +41,11 @@ app.cli.add_command(create_admin)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-# Setup Flask-Gravatar
-gravatar = Gravatar(
-    app,
-    size=100,
-    rating='g',
-    default='retro',
-    force_default=False,
-    force_lower=False,
-    use_ssl=False,
-    base_url=None,
-)
+
+# Setup Gravatar
+def gravatar_url(email, size=100, rating='g', default='retro', force_default=False):
+    hash_value = md5(email.lower().encode('utf-8')).hexdigest()
+    return f"https://www.gravatar.com/avatar/{hash_value}?s={size}&d={default}&r={rating}&f={force_default}"
 
 
 # User Loader
@@ -150,6 +144,15 @@ def admin_required(f):
             return redirect(url_for('index'))
         return f(*args, **kwargs)
 
+    return decorated_function
+
+def only_commenter(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        user = db.session.execute(db.select(Comment).where(Comment.author_id == current_user.id)).scalar()
+        if not current_user.is_authenticated or current_user.id != user.author_id:
+            return abort(403)
+        return f(*args, **kwargs)
     return decorated_function
 
 
@@ -278,14 +281,14 @@ def post(post_id):
             "post.html",
             post=post,
             form=form,
-            gravatar=gravatar,
+            gravatar_url=gravatar_url,
             header_image_url=post.img_url,
         )
     return render_template(
         "post.html",
         post=None,
         form=form,
-        gravatar=gravatar,
+        gravatar_url=gravatar_url,
         header_image_url=url_for('static', filename='assets/img/post-bg.jpg'),
     )
 
@@ -360,6 +363,13 @@ def delete_post(post_id):
         flash('Post deleted!', 'success')
     return redirect(url_for('index'))
 
+@app.route("/delete/comment/<int:comment_id>/<int:post_id>")
+@only_commenter
+def delete_comment(post_id, comment_id):
+    post_to_delete = db.get_or_404(Comment, comment_id)
+    db.session.delete(post_to_delete)
+    db.session.commit()
+    return redirect(url_for('post', post_id=post_id))
 
 if __name__ == "__main__":
     app.run(debug=True, port=5002)
