@@ -12,6 +12,16 @@
 
 <!-- Main Content-->
 {% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert {{ 'alert-success' if category == 'success' else 'alert-danger' }} alert-dismissible fade show text-center mb-3" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
 <!-- Post preview-->
 {% for post in posts %}
 <div class="post-preview d-flex justify-content-between align-items-start">
@@ -22,20 +32,24 @@
         </a>
         <p class="post-meta">
             Posted by
-            <a href="#!">{{ post.author }}</a>
+            <a href="#!">{{ post.author.name }}</a>
             on {{ post.date }}
         </p>
     </div>
     <!-- Delete Button -->
+    {% if current_user.is_admin %}
     <a href="{{ url_for('delete_post', post_id=post.id) }}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure you want to delete this post?');">
         ✘
     </a>
+    {% endif %}
 </div>
 <!-- Divider-->
 <hr class="my-4" />
 {% endfor %}
 <!-- Pager-->
+{% if current_user.is_admin %}
 <div class="d-flex justify-content-end mb-4">
 	<a class="btn btn-primary text-uppercase" href="{{ url_for('new_post') }}">Add New Post +</a>
 </div>
+{% endif %}
 {% endblock %}

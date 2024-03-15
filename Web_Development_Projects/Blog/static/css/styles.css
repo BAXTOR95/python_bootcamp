@@ -10796,3 +10796,36 @@ header.masthead .post-heading .meta a {
     font-size: 2.25rem;
   }
 }
+
+.post-comment {
+  display: flex;
+  align-items: flex-start; /* Align items to the start of the cross axis */
+  background: #f8f9fa;
+  padding: 0.5em;
+  border-radius: 15px;
+  margin-bottom: 1em; /* Space between comments */
+}
+
+.user-avatar {
+  width: 40px; /* Adjust the size as necessary */
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-content {
+  flex: 1; /* Ensure the content takes up the remaining space */
+}
+
+.comment-content p {
+  margin: 0;
+  font-size: 1em; /* Adjust the size as necessary */
+  color: #333;
+}
+
+.comment-author {
+  display: block; /* Make the author's name its own line */
+  margin-top: 0.5em; /* Space between comment and author's name */
+  font-size: 0.8em;
+  color: #666;
+}

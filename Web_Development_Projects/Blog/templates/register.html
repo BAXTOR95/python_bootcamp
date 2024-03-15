@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+<!-- Register Form -->
+{% block title %}Register{% endblock %}
+<!-- Register Header -->
+{% block header %}
+<div class="page-heading">
+	<h1>User Registration</h1>
+	<span class="subheading">
+		Please fill out the form below to create an account.
+	</span>
+</div>
+{% endblock %}
+
+<main class="mb-4">
+	{% block content %}
+	<p>
+		Already have an account? <a href="{{ url_for('login') }}">Login</a>
+	</p>
+	<div class="my-5">
+		<form id="registerForm" method="post" action="{{ url_for('register') }}">
+			{{ form.hidden_tag() }}
+			<div class="form-floating">
+				{{ form.email(class="form-control" + (" is-invalid" if form.email.errors else ""), placeholder="Enter your email...") }}
+				<label for="email">Email</label>
+				{% if form.email.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.email.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<div class="form-floating">
+				{{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Enter your name...") }}
+				<label for="name">Name</label>
+				{% if form.name.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.name.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<div class="form-floating">
+				{{ form.password(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Enter your password...") }}
+				<label for="password">Password</label>
+				{% if form.password.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.password.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<div class="form-floating">
+				{{ form.password2(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Re-enter your password...") }}
+				<label for="password2">Confirm Password</label>
+				{% if form.password2.errors %}
+				<div class="invalid-feedback" style="display: block">
+					{{ form.password2.errors[0] }}
+				</div>
+				{% endif %}
+			</div>
+			<br>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					{% for category, message in messages %}
+						<div class="alert {{ 'alert-success' if category == 'success' else 'alert-danger' }} alert-dismissible fade show text-center mb-3" role="alert">
+							{{ message }}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+			<!-- Submit Button -->
+			{{ form.submit(class="btn btn-primary text-uppercase") }}
+		</form>
+	</div>
+	{% endblock %}
+</main>

@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 <!-- Page Title-->
 {% block title %}{{ post.title }}{% endblock %}
+<!-- Head Content-->
+{% block head %}
+{{ super() }}
+{{ ckeditor.load() }}
+{{ ckeditor.config(name='body') }}
+{% endblock %}
 <!-- Page Header-->
 {% block header %}
 <div class="post-heading">
@@ -8,7 +14,7 @@
 	<h2 class="subheading">{{ post.subtitle }}</h2>
 	<span class="meta">
 		Posted by
-		<a href="#!">{{ post.author }}</a>
+		<a href="#!">{{ post.author.name }}</a>
 		on {{ post.date }}
 	</span>
 </div>
@@ -16,11 +22,72 @@
 <!-- Post Content-->
 <article class="mb-4">
 	{% block content %}
+	{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{% for category, message in messages %}
+			<div
+				class="alert {{ 'alert-success' if category == 'success' else 'alert-danger' }} alert-dismissible fade show text-center mb-3"
+				role="alert"
+			>
+				{{ message }}
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="alert"
+					aria-label="Close"
+				></button>
+			</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
 	{{ post.body | safe }}
 
 	<!-- Pager-->
+	{% if current_user.is_admin %}
 	<div class="d-flex justify-content-end mb-4">
 		<a class="btn btn-primary text-uppercase" href="{{ url_for('edit_post', post_id=post.id) }}">Edit Post</a>
+	</div>
+	{% endif %}
+
+	<!-- Divider-->
+	<hr class="my-4" />
+	<!-- Comments Form-->
+	{% if current_user.is_authenticated %}
+	<div class="card my-4">
+		<h5 class="card-header">Leave a Comment:</h5>
+		<div class="card-body">
+			<form id="commentForm" method="post" action="{{ url_for('post', post_id=post.id) }}">
+				{{ form.hidden_tag() }}
+				<div class="form-floating">
+					{{ form.comment(class="form-control", placeholder="Enter your comment
+					here...") }} {% if form.comment.errors %}
+					<div class="invalid-feedback" style="display: block">
+						{{ form.comment.errors[0] }}
+					</div>
+					{% endif %}
+				</div>
+				<br />
+				<!-- Submit Button -->
+				{{ form.submit(class="btn btn-primary text-uppercase") }}
+			</form>
+		</div>
+	</div>
+	{% endif %}
+	<br />
+	<!-- Single Comment-->
+	<div class="card my-4">
+		<h5 class="card-header">Comments:</h5>
+		<div class="card-body">
+			{% for comment in post.comments %}
+			<div class="post-comment">
+				<img src="{{ comment.comment_author.email | gravatar }}" alt="user avatar" class="user-avatar">
+				<div class="comment-content">
+					<p>{{ comment.text | safe }}</p>
+					<span class="comment-author">- {{ comment.comment_author.name }}</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
 
 	{% endblock %}
