@@ -366,9 +366,11 @@ def delete_post(post_id):
 @app.route("/delete/comment/<int:comment_id>/<int:post_id>")
 @only_commenter
 def delete_comment(post_id, comment_id):
-    post_to_delete = db.get_or_404(Comment, comment_id)
-    db.session.delete(post_to_delete)
-    db.session.commit()
+    comment_to_delete = db.session.get(Comment, comment_id)
+    if comment_to_delete:
+        db.session.delete(comment_to_delete)
+        db.session.commit()
+        flash('Comment deleted!', 'success')
     return redirect(url_for('post', post_id=post_id))
 
 if __name__ == "__main__":
