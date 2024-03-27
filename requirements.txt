@@ -95,6 +95,7 @@ parso==0.8.3
 pillow==10.2.0
 platformdirs==4.2.0
 plotly==5.20.0
+pooch==1.8.1
 prometheus_client==0.20.0
 prompt-toolkit==3.0.43
 psutil==5.9.8
@@ -122,6 +123,7 @@ requests==2.31.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rpds-py==0.18.0
+scipy==1.12.0
 selenium==4.17.2
 Send2Trash==1.8.2
 six==1.16.0
