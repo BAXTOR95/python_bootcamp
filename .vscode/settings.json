@@ -4,5 +4,6 @@
         "columnspan",
         "pygame",
         "rbtn"
-    ]
+    ],
+    "python.analysis.typeCheckingMode": "basic"
 }
